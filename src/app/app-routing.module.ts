@@ -13,24 +13,33 @@ import { AuthenticationGuardService } from './services/authentication-guard.serv
 import { LoginGuardService } from './services/login-guard.service';
 import { LogoutGuardService } from './services/logout-guard.service';
 
-
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'contacts', component: ContactInformationComponent },
   { path: 'notifications', component: NotificationsComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'questions', component: QuestionsComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthenticationGuardService] },
-  { path: 'login', component: LoginComponent, canActivate: [LoginGuardService] },
-  { path: 'logout', component: LogoutComponent, canActivate: [LogoutGuardService] },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthenticationGuardService],
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    canActivate: [LoginGuardService],
+  },
+  {
+    path: 'logout',
+    component: LogoutComponent,
+    canActivate: [LogoutGuardService],
+  },
   { path: 'not-found', component: PageNotFoundComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { scrollPositionRestoration: 'top' })
-  ],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'top' })],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

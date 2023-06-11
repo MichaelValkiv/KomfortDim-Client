@@ -1,14 +1,22 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { faInfoCircle, faFileSignature, faSignInAlt, faSignOutAlt, faQuestionCircle, faBell, faTools, faCog } from '@fortawesome/free-solid-svg-icons';
+import {
+  faInfoCircle,
+  faFileSignature,
+  faSignInAlt,
+  faSignOutAlt,
+  faQuestionCircle,
+  faBell,
+  faTools,
+  faCog,
+} from '@fortawesome/free-solid-svg-icons';
 import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.scss']
+  styleUrls: ['./sidenav.component.scss'],
 })
 export class SidenavComponent implements OnInit {
-
   faInfoCircle = faInfoCircle;
   faFileSignature = faFileSignature;
   faSignInAlt = faSignInAlt;
@@ -20,13 +28,11 @@ export class SidenavComponent implements OnInit {
 
   @Output() public sideNavClose = new EventEmitter();
 
-  constructor( public authenticationService: AuthenticationService ) { }
+  constructor(public authenticationService: AuthenticationService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   public onSideNavClose = () => {
     this.sideNavClose.emit();
-  }
-
+  };
 }

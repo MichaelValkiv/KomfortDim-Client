@@ -9,7 +9,14 @@ import { ContactInformationComponent } from './components/contact-information/co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
-import { MatSidenavModule, MatTabsModule, MatToolbarModule, MatIconModule, MatButtonModule, MatListModule } from '@angular/material';
+import {
+  MatSidenavModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatButtonModule,
+  MatListModule,
+} from '@angular/material';
 import { HeaderComponent } from './components/header/header.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -23,7 +30,6 @@ import { QuestionsComponent } from './components/questions/questions.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { ServicesComponent } from './components/services/services.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { AuthenticationHttpInterceptorService } from './services/authentication-http-interceptor.service';
 
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
@@ -48,7 +54,7 @@ import { NotificationsService } from './services/notifications.service';
 import { HttpUrlInterceptorService } from './services/http-url-interceptor.service';
 
 import { QuillModule } from 'ngx-quill';
-import { SafeHtmlPipe } from './pipes/safe-html.pipe'
+import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 
 @NgModule({
   declarations: [
@@ -65,7 +71,7 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe'
     NotificationsComponent,
     ServicesComponent,
     DashboardComponent,
-    SafeHtmlPipe
+    SafeHtmlPipe,
   ],
   imports: [
     BrowserModule,
@@ -94,7 +100,7 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe'
     ToastModule,
     ProgressSpinnerModule,
     ProgressBarModule,
-    QuillModule.forRoot()
+    QuillModule.forRoot(),
   ],
   exports: [
     MatSidenavModule,
@@ -102,7 +108,7 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe'
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
   ],
   providers: [
     CompanyService,
@@ -112,9 +118,11 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe'
     NotificationsService,
     MessageService,
     {
-      provide: HTTP_INTERCEPTORS, useClass: HttpUrlInterceptorService, multi: true
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpUrlInterceptorService,
+      multi: true,
     },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
