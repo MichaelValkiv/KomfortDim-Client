@@ -14,7 +14,7 @@ import {
   faBolt,
   faWater,
   faTint,
-  faBriefcase
+  faBriefcase,
 } from '@fortawesome/free-solid-svg-icons';
 import { ServicesService } from '../../services/services.service';
 import { Services } from '../../models/services.model';
@@ -24,10 +24,9 @@ import { MessageService } from 'primeng/api';
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
-  styleUrls: ['./services.component.scss']
+  styleUrls: ['./services.component.scss'],
 })
 export class ServicesComponent implements OnInit, OnDestroy {
-
   faBroom = faBroom;
   faHouseDamage = faHouseDamage;
   faWind = faWind;
@@ -46,25 +45,28 @@ export class ServicesComponent implements OnInit, OnDestroy {
 
   servicesGetSubscription: Subscription;
 
-  isDataLoading: boolean = true;
+  isDataLoading = true;
 
-  constructor(private pageTitle: PageTitleService,
-              private metaService: Meta,
-              private messageService: MessageService,
-              private servicesService: ServicesService) {
-  }
+  constructor(
+    private pageTitle: PageTitleService,
+    private metaService: Meta,
+    private messageService: MessageService,
+    private servicesService: ServicesService
+  ) {}
 
   ngOnInit() {
     this.pageTitle.setTitle('Комфорт-Дім - Наші Послуги');
     this.metaService.addTags([
       {
         name: 'keywords',
-        content: 'Комфорт-Дім, Послуги, Управляюча компанія, Калуш, Комфорт, Дім, Управляюча, Компанія, Комфорт-Дім Калуш, Комфорт-Дім Послуги, УК Комфорт-Дім, УК Калуш, Управляюча Компанія Калуш, УК'
+        content:
+          // tslint:disable-next-line:max-line-length
+          'Комфорт-Дім, Послуги, Управляюча компанія, Калуш, Комфорт, Дім, Управляюча, Компанія, Комфорт-Дім Калуш, Комфорт-Дім Послуги, УК Комфорт-Дім, УК Калуш, Управляюча Компанія Калуш, УК',
       },
-      {name: 'author', content: 'MVYV'},
-      {name: 'description', content: 'Комфорт-Дім - Послуги'},
-      {name: 'robots', content: 'index, follow'},
-      {name: 'googlebot', content: 'index, follow'}
+      { name: 'author', content: 'MVYV' },
+      { name: 'description', content: 'Комфорт-Дім - Послуги' },
+      { name: 'robots', content: 'index, follow' },
+      { name: 'googlebot', content: 'index, follow' },
     ]);
     this.getAllServices();
   }
@@ -76,25 +78,22 @@ export class ServicesComponent implements OnInit, OnDestroy {
   }
 
   getAllServices() {
-    this.servicesGetSubscription = this.servicesService.getServiceInfo().subscribe(
-      data => {
-        this.allServices = data;
-        this.isDataLoading = false;
-        this.messageService.add({
-          severity: 'success',
-          summary: 'Успішно Завантажено Послуги, Які Надає Компанія.',
-          detail: 'Повідомлення від сервера Комфорт-Дім',
-          life: 4000
-        });
-      }, () => {
-        this.isDataLoading = true;
-        this.messageService.add({
-          severity: 'error',
-          summary: 'Сталася Помилка. Сервер Не Відповідає.',
-          detail: 'Повідомлення від сервера Комфорт-Дім',
-          life: 4000
-        });
-      });
+    this.servicesGetSubscription = this.servicesService
+      .getServiceInfo()
+      .subscribe(
+        (data) => {
+          this.allServices = data;
+          this.isDataLoading = false;
+        },
+        () => {
+          this.isDataLoading = true;
+          this.messageService.add({
+            severity: 'error',
+            summary: 'Сталася Помилка. Сервер Не Відповідає.',
+            detail: 'Повідомлення від сервера Комфорт-Дім',
+            life: 4000,
+          });
+        }
+      );
   }
-
 }

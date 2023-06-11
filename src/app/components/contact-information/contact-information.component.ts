@@ -14,7 +14,7 @@ import {
   faBolt,
   faIdCard,
   faAddressBook,
-  faPhoneVolume
+  faPhoneVolume,
 } from '@fortawesome/free-solid-svg-icons';
 import { ContactsService } from '../../services/contacts.service';
 import { Contacts } from '../../models/contacts.model';
@@ -24,10 +24,9 @@ import { MessageService } from 'primeng/api';
 @Component({
   selector: 'app-contact-information',
   templateUrl: './contact-information.component.html',
-  styleUrls: ['./contact-information.component.scss']
+  styleUrls: ['./contact-information.component.scss'],
 })
 export class ContactInformationComponent implements OnInit, OnDestroy {
-
   faMapMarkerAlt = faMapMarkerAlt;
   faCreditCard = faCreditCard;
   faPhone = faPhone;
@@ -46,25 +45,28 @@ export class ContactInformationComponent implements OnInit, OnDestroy {
 
   contactsGetSubscription: Subscription;
 
-  isDataLoading: boolean = true;
+  isDataLoading = true;
 
-  constructor(private pageTitle: PageTitleService,
-              private metaService: Meta,
-              private messageService: MessageService,
-              private contactsService: ContactsService) {
-  }
+  constructor(
+    private pageTitle: PageTitleService,
+    private metaService: Meta,
+    private messageService: MessageService,
+    private contactsService: ContactsService
+  ) {}
 
   ngOnInit() {
     this.pageTitle.setTitle('Комфорт-Дім - Контактна Інформація');
     this.metaService.addTags([
       {
         name: 'keywords',
-        content: 'Комфорт-Дім, Контактні Дані, Управляюча компанія, Калуш, Комфорт, Дім, Управляюча, Компанія, Комфорт-Дім Калуш, Комфорт-Дім Контактні Дані, УК Комфорт-Дім, УК Калуш, Управляюча Компанія Калуш, УК'
+        content:
+          // tslint:disable-next-line:max-line-length
+          'Комфорт-Дім, Контактні Дані, Управляюча компанія, Калуш, Комфорт, Дім, Управляюча, Компанія, Комфорт-Дім Калуш, Комфорт-Дім Контактні Дані, УК Комфорт-Дім, УК Калуш, Управляюча Компанія Калуш, УК',
       },
-      {name: 'author', content: 'MVYV'},
-      {name: 'description', content: 'Комфорт-Дім - Контактна Інформація'},
-      {name: 'robots', content: 'index, follow'},
-      {name: 'googlebot', content: 'index, follow'}
+      { name: 'author', content: 'MVYV' },
+      { name: 'description', content: 'Комфорт-Дім - Контактна Інформація' },
+      { name: 'robots', content: 'index, follow' },
+      { name: 'googlebot', content: 'index, follow' },
     ]);
     this.getAllContacts();
   }
@@ -76,25 +78,22 @@ export class ContactInformationComponent implements OnInit, OnDestroy {
   }
 
   getAllContacts() {
-    this.contactsGetSubscription = this.contactsService.getContactInfo().subscribe(
-      data => {
-        this.allContacts = data;
-        this.isDataLoading = false;
-        this.messageService.add({
-          severity: 'success',
-          summary: 'Успішно Завантажено Контактні Дані Компанії.',
-          detail: 'Повідомлення від сервера Комфорт-Дім',
-          life: 4000
-        });
-      }, () => {
-        this.isDataLoading = true;
-        this.messageService.add({
-          severity: 'error',
-          summary: 'Сталася Помилка. Сервер Не Відповідає.',
-          detail: 'Повідомлення від сервера Комфорт-Дім',
-          life: 4000
-        });
-      });
+    this.contactsGetSubscription = this.contactsService
+      .getContactInfo()
+      .subscribe(
+        (data) => {
+          this.allContacts = data;
+          this.isDataLoading = false;
+        },
+        () => {
+          this.isDataLoading = true;
+          this.messageService.add({
+            severity: 'error',
+            summary: 'Сталася Помилка. Сервер Не Відповідає.',
+            detail: 'Повідомлення від сервера Комфорт-Дім',
+            life: 4000,
+          });
+        }
+      );
   }
-
 }
