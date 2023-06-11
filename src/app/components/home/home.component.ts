@@ -3,8 +3,6 @@ import { PageTitleService } from '../../services/page-title.service';
 import { Meta } from '@angular/platform-browser';
 import {
   faHome,
-  faLongArrowAltUp,
-  faLongArrowAltDown,
   faBuilding,
   faCity,
   faWarehouse,
@@ -23,8 +21,6 @@ import { MessageService } from 'primeng/api';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   faHome = faHome;
-  faLongArrowAltUp = faLongArrowAltUp;
-  faLongArrowAltDown = faLongArrowAltDown;
   faBuilding = faBuilding;
   faCity = faCity;
   faWarehouse = faWarehouse;

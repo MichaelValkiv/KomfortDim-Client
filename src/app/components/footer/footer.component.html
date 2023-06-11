@@ -1,5 +1,9 @@
 <div class="footer transitionStyle">
   <div class="footer-nav transitionStyle">
+    <a routerLink="/" class="nav-link transitionStyle">
+      <fa-icon [icon]="faInfoCircle"></fa-icon>
+      Компанія
+    </a>
     <a routerLink="/services" class="nav-link transitionStyle">
       <fa-icon [icon]="faTools"></fa-icon>
       Послуги
@@ -7,10 +11,6 @@
     <a routerLink="/contacts" class="nav-link transitionStyle">
       <fa-icon [icon]="faFileSignature"></fa-icon>
       Контакти
-    </a>
-    <a routerLink="/" class="nav-link transitionStyle">
-      <fa-icon [icon]="faInfoCircle"></fa-icon>
-      Інформація
     </a>
     <a routerLink="/questions" class="nav-link transitionStyle">
       <fa-icon [icon]="faQuestionCircle"></fa-icon>
@@ -23,10 +23,15 @@
   </div>
   <div class="footer-info transitionStyle">
     <a routerLink="/">
-      <img src="assets/images/logo_transparent.png" height="100" class="footer-logo">
+      <img
+        src="assets/images/logo_transparent.png"
+        height="100"
+        class="footer-logo"
+      />
     </a>
     <div class="footer-title">
-      Товариство з обмеженою відповідальністю<br>"Управляюча компанія "Комфорт-Дім"
+      Товариство з обмеженою відповідальністю<br />"Управляюча компанія
+      "Комфорт-Дім"
     </div>
   </div>
   <div class="footer-address">

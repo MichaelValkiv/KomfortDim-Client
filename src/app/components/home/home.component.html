@@ -1,43 +1,101 @@
 <div class="progressSpinnerBox" [hidden]="!isDataLoading">
-  <p-progressBar mode="indeterminate" [style]="{'height': '10px'}" class="progressBarStyle"></p-progressBar>
+  <p-progressBar
+    mode="indeterminate"
+    [style]="{ height: '10px' }"
+    class="progressBarStyle"
+  ></p-progressBar>
 </div>
-<p-toast styleClass="custom-toast" [showTransitionOptions]="'800ms ease-out'"
-         [hideTransitionOptions]="'800ms ease-out'"></p-toast>
-<div class="home-title transitionStyle">Коротка характеристика нашої компанії</div>
+<p-toast
+  styleClass="custom-toast"
+  [showTransitionOptions]="'800ms ease-out'"
+  [hideTransitionOptions]="'800ms ease-out'"
+></p-toast>
+<div class="home-title transitionStyle">
+  Коротка характеристика нашої компанії
+</div>
 
 <div class="home-container transitionStyle">
-
   <div class="about-company transitionStyle">
-    <img src="assets/images/logo_transparent.png" height="100">
-    УК “Комфорт-Дім” – це компанія, що надає
-    послуги з управління багатоквартирним
-    будинком згідно з діючим законодавством. Наші
-    клієнти співвласники житлових та нежитлових
-    приміщень. Наша компанія забезпечує належне
-    утримання спільного майна багатоквартирного
-    будинку.<br><br>
-    Ми орієнтовані на результат, добре знаємо та
-    розуміємо Ваші очікування, спроможні
-    організувати і налагодити управління та
-    обслуговування відповідно до норм, стандартів,
-    правил та Ваших побажань.
+    <img src="assets/images/logo_transparent.png" height="100" />
+    УК “Комфорт-Дім” – це компанія, що надає послуги з управління
+    багатоквартирним будинком згідно з діючим законодавством. Наші клієнти
+    співвласники житлових та нежитлових приміщень. Наша компанія забезпечує
+    належне утримання спільного майна багатоквартирного будинку.<br /><br />
+    Ми орієнтовані на результат, добре знаємо та розуміємо Ваші очікування,
+    спроможні організувати і налагодити управління та обслуговування відповідно
+    до норм, стандартів, правил та Ваших побажань.
   </div>
 
-  <div class="characteristic-items" *ngFor="let companyCharacteristic of companyCharacteristics">
+  <div
+    class="characteristic-items"
+    *ngFor="let companyCharacteristic of companyCharacteristics"
+  >
     <div class="home-info-item transitionStyle">
       <div class="home-info-icon transitionStyle">
-        <fa-icon [icon]="faHome" *ngIf="companyCharacteristic.characteristic_type == 'Тип Характеристики (Будинків Загалом)'"></fa-icon>
-        <fa-icon [icon]="faBuilding" *ngIf="companyCharacteristic.characteristic_type == 'Тип Характеристики (Будинків З Ліфтами)'"></fa-icon>
-        <fa-icon [icon]="faLongArrowAltUp" *ngIf="companyCharacteristic.characteristic_type == 'Тип Характеристики (Ліфти)'"></fa-icon>
-        <fa-icon [icon]="faLongArrowAltDown" *ngIf="companyCharacteristic.characteristic_type == 'Тип Характеристики (Ліфти)'"></fa-icon>
-        <fa-icon [icon]="faCalculator" *ngIf="companyCharacteristic.characteristic_type == 'Тип Характеристики (Загальна Площа Будинків)'"></fa-icon>
-        <fa-icon [icon]="faCity" *ngIf="companyCharacteristic.characteristic_type == 'Тип Характеристики (Кількість Квартир Загалом)'"></fa-icon>
-        <fa-icon [icon]="faWarehouse" *ngIf="companyCharacteristic.characteristic_type == 'Тип Характеристики (Нежитлових Приміщень Загалом)'"></fa-icon>
-        <fa-icon [icon]="faMarker" *ngIf="companyCharacteristic.characteristic_type == 'Тип Характеристики (Загальна Характеристика)'"></fa-icon>
+        <fa-icon
+          [icon]="faHome"
+          *ngIf="
+            companyCharacteristic.characteristic_type ==
+            'Тип Характеристики (Будинків Загалом)'
+          "
+        ></fa-icon>
+        <fa-icon
+          [icon]="faBuilding"
+          *ngIf="
+            companyCharacteristic.characteristic_type ==
+            'Тип Характеристики (Будинків З Ліфтами)'
+          "
+        ></fa-icon>
+        <svg
+          *ngIf="
+            companyCharacteristic.characteristic_type ==
+            'Тип Характеристики (Ліфти)'
+          "
+          xmlns="http://www.w3.org/2000/svg"
+          height="1em"
+          viewBox="0 0 512 512"
+        >
+          <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            fill="#ed9728"
+            d="M132.7 4.7l-64 64c-4.6 4.6-5.9 11.5-3.5 17.4s8.3 9.9 14.8 9.9H208c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4l-64-64c-6.2-6.2-16.4-6.2-22.6 0zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V192c0-35.3-28.7-64-64-64H64zm96 96a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM80 400c0-26.5 21.5-48 48-48h64c26.5 0 48 21.5 48 48v16c0 17.7-14.3 32-32 32H112c-17.7 0-32-14.3-32-32V400zm192 0c0-26.5 21.5-48 48-48h64c26.5 0 48 21.5 48 48v16c0 17.7-14.3 32-32 32H304c-17.7 0-32-14.3-32-32V400zm32-128a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zM356.7 91.3c6.2 6.2 16.4 6.2 22.6 0l64-64c4.6-4.6 5.9-11.5 3.5-17.4S438.5 0 432 0H304c-6.5 0-12.3 3.9-14.8 9.9s-1.1 12.9 3.5 17.4l64 64z"
+          />
+        </svg>
+        <fa-icon
+          [icon]="faCalculator"
+          *ngIf="
+            companyCharacteristic.characteristic_type ==
+            'Тип Характеристики (Загальна Площа Будинків)'
+          "
+        ></fa-icon>
+        <fa-icon
+          [icon]="faCity"
+          *ngIf="
+            companyCharacteristic.characteristic_type ==
+            'Тип Характеристики (Кількість Квартир Загалом)'
+          "
+        ></fa-icon>
+        <fa-icon
+          [icon]="faWarehouse"
+          *ngIf="
+            companyCharacteristic.characteristic_type ==
+            'Тип Характеристики (Нежитлових Приміщень Загалом)'
+          "
+        ></fa-icon>
+        <fa-icon
+          [icon]="faMarker"
+          *ngIf="
+            companyCharacteristic.characteristic_type ==
+            'Тип Характеристики (Загальна Характеристика)'
+          "
+        ></fa-icon>
       </div>
-      <div class="home-info-text transitionStyle">{{companyCharacteristic.characteristic}}</div>
-      <div class="home-info-value transitionStyle">{{companyCharacteristic.characteristic_value}}</div>
+      <div class="home-info-text transitionStyle">
+        {{ companyCharacteristic.characteristic }}
+      </div>
+      <div class="home-info-value transitionStyle">
+        {{ companyCharacteristic.characteristic_value }}
+      </div>
     </div>
   </div>
-
 </div>

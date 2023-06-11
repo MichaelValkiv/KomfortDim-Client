@@ -1,24 +1,53 @@
+<p-toast
+  styleClass="custom-toast"
+  [showTransitionOptions]="'800ms ease-out'"
+  [hideTransitionOptions]="'800ms ease-out'"
+></p-toast>
 <div class="loginBox">
-  <div class="login-container" (keyup.enter)="checkLogin();">
+  <div class="login-container" (keyup.enter)="checkLogin()">
     <div class="login-title">
-      Товариство з обмеженою відповідальністю<br>"Управляюча компанія "Комфорт-Дім"
+      Товариство з обмеженою відповідальністю<br />"Управляюча компанія
+      "Комфорт-Дім"
     </div>
-    <img src="assets/images/logo_transparent.png" height="100" class="">
-    <div class="login-subtitle">
-    </div>
+    <img src="assets/images/logo_transparent.png" height="100" class="" />
+    <div class="login-subtitle"></div>
     <div class="form-container">
       <form autocomplete="off" #loginForm="ngForm">
         <span class="ui-float-label inputBox">
-          <input id="float-input-login" type="text" size="30" pInputText name="username" [(ngModel)]="username" required>
+          <input
+            id="float-input-login"
+            type="text"
+            size="30"
+            pInputText
+            name="username"
+            [(ngModel)]="username"
+            required
+          />
           <label for="float-input-login">Логін</label>
           <fa-icon [icon]="faUser" class="transitionStyle"></fa-icon>
         </span>
         <span class="ui-float-label inputBox">
-          <input id="float-input-pass" type="password" size="30" pPassword [feedback]="false" name="password" [(ngModel)]="password" required>
+          <input
+            id="float-input-pass"
+            type="password"
+            size="30"
+            pPassword
+            [feedback]="false"
+            name="password"
+            [(ngModel)]="password"
+            required
+          />
           <label for="float-input-pass">Пароль</label>
           <fa-icon [icon]="faKey" class="transitionStyle"></fa-icon>
         </span>
-        <button pButton type="button" label="Вхід" [disabled]="loginForm.invalid" (click)="checkLogin();"></button>
+        <button
+          pButton
+          type="button"
+          label="Вхід"
+          [disabled]="loginForm.invalid"
+          (click)="checkLogin()"
+          (keyup.enter)="checkLogin()"
+        ></button>
       </form>
     </div>
   </div>

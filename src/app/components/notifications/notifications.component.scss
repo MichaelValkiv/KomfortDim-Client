@@ -6,32 +6,53 @@ $middleSiteColor: #a65e09;
 $blackSiteColor: #000000;
 $whiteSiteColor: #ffffff;
 
-.transitionStyle
-{
-  -webkit-transition: all ease-in-out .25s;
-  -moz-transition: all ease-in-out .25s;
-  -ms-transition: all ease-in-out .25s;
-  -o-transition: all ease-in-out .25s;
-  transition: all ease-in-out .25s;
+.transitionStyle {
+  -webkit-transition: all ease-in-out 0.25s;
+  -moz-transition: all ease-in-out 0.25s;
+  -ms-transition: all ease-in-out 0.25s;
+  -o-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
 }
-.progressSpinnerBox
-{
+.progressSpinnerBox {
   width: 100%;
   position: fixed;
   top: 65px;
   left: 0;
 }
-.notifications-header
-{
+.notifications-header {
   font-family: 'Montserrat Alternates', sans-serif;
   color: $darkSiteColor;
   font-size: 32px;
   width: calc(100% - 6px);
   text-align: center;
-  background: rgb(255,255,191);
-  background: -moz-linear-gradient(left, rgba(255,255,191,1) 0%, rgba(255,255,191,1) 15%, rgba(255,188,73,1) 49%, rgba(255,188,73,1) 51%, rgba(255,255,191,1) 85%, rgba(255,255,191,1) 100%);
-  background: -webkit-linear-gradient(left, rgba(255,255,191,1) 0%,rgba(255,255,191,1) 15%,rgba(255,188,73,1) 49%,rgba(255,188,73,1) 51%,rgba(255,255,191,1) 85%,rgba(255,255,191,1) 100%);
-  background: linear-gradient(to right, rgba(255,255,191,1) 0%,rgba(255,255,191,1) 15%,rgba(255,188,73,1) 49%,rgba(255,188,73,1) 51%,rgba(255,255,191,1) 85%,rgba(255,255,191,1) 100%);
+  background: rgb(255, 255, 191);
+  background: -moz-linear-gradient(
+    left,
+    rgba(255, 255, 191, 1) 0%,
+    rgba(255, 255, 191, 1) 15%,
+    rgba(255, 188, 73, 1) 49%,
+    rgba(255, 188, 73, 1) 51%,
+    rgba(255, 255, 191, 1) 85%,
+    rgba(255, 255, 191, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 191, 1) 0%,
+    rgba(255, 255, 191, 1) 15%,
+    rgba(255, 188, 73, 1) 49%,
+    rgba(255, 188, 73, 1) 51%,
+    rgba(255, 255, 191, 1) 85%,
+    rgba(255, 255, 191, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 191, 1) 0%,
+    rgba(255, 255, 191, 1) 15%,
+    rgba(255, 188, 73, 1) 49%,
+    rgba(255, 188, 73, 1) 51%,
+    rgba(255, 255, 191, 1) 85%,
+    rgba(255, 255, 191, 1) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffbf', endColorstr='#ffffbf',GradientType=1 );
   margin: 20px 0 20px 0;
   padding: 20px 10px;
@@ -40,8 +61,7 @@ $whiteSiteColor: #ffffff;
   -ms-user-select: none;
   user-select: none;
 }
-.showFormBtn
-{
+.showFormBtn {
   position: fixed;
   top: 80px;
   left: 14px;
@@ -57,62 +77,50 @@ $whiteSiteColor: #ffffff;
   border: 1px solid transparent;
   z-index: 1000;
 }
-.showFormBtn:hover
-{
+.showFormBtn:hover {
   background-color: $veryLightSiteColor;
   color: $darkSiteColor;
   border: 1px solid $darkSiteColor;
 }
-.notifications-container
-{
+.notifications-container {
   width: 1400px;
   min-height: calc(100vh - 104px);
   margin: 0 auto 20px;
 }
-:host ::ng-deep
-{
-  .progressBarStyle .ui-progressbar
-  {
+:host ::ng-deep {
+  .progressBarStyle .ui-progressbar {
     background-color: $ultraLightSiteColor !important;
     -webkit-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
     border-radius: 0 !important;
   }
-  .progressBarStyle .ui-progressbar .ui-progressbar-label
-  {
+  .progressBarStyle .ui-progressbar .ui-progressbar-label {
     color: $darkSiteColor !important;
   }
-  .progressBarStyle .ui-progressbar .ui-progressbar-value
-  {
+  .progressBarStyle .ui-progressbar .ui-progressbar-value {
     background: $darkSiteColor !important;
   }
-  .ui-dialog
-  {
+  .ui-dialog {
     font-family: 'Montserrat Alternates', sans-serif;
   }
-  .ui-dialog-titlebar
-  {
+  .ui-dialog-titlebar {
     background-color: $darkSiteColor !important;
     color: $lightSiteColor !important;
     border-color: $lightSiteColor !important;
     cursor: move;
   }
-  .ui-dialog-title
-  {
+  .ui-dialog-title {
     cursor: default;
   }
-  .ui-dialog-titlebar-icon
-  {
+  .ui-dialog-titlebar-icon {
     color: $lightSiteColor !important;
   }
-  .ui-dialog-content
-  {
+  .ui-dialog-content {
     background-color: $darkSiteColor !important;
     border-color: $lightSiteColor !important;
   }
 }
-.question-form
-{
+.question-form {
   padding: 20px;
   display: flex;
   flex-flow: column wrap;
@@ -128,48 +136,40 @@ $whiteSiteColor: #ffffff;
   -ms-user-select: none;
   user-select: none;
   color: $darkSiteColor;
-  .question-form-title
-  {
+  .question-form-title {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 32px;
     text-align: center;
   }
-  .question-line
-  {
+  .question-line {
     width: 50%;
     height: 3px;
     background-color: $darkSiteColor;
     margin: 25px 0;
   }
-  .alert-icon
-  {
+  .alert-icon {
     font-size: 64px;
     margin-bottom: 15px;
   }
-  .question-form-subtitle
-  {
+  .question-form-subtitle {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 20px;
     text-align: center;
     margin-bottom: 20px;
   }
-  form
-  {
+  form {
     width: 75%;
     text-align: center;
-    span.ui-float-label
-    {
+    span.ui-float-label {
       margin-top: 20px;
       display: flex;
       flex-flow: row-reverse nowrap;
-      label
-      {
+      label {
         font-family: 'Montserrat Alternates', sans-serif;
         color: $middleSiteColor;
         margin-left: 50px;
       }
-      input
-      {
+      input {
         width: calc(100% - 45px);
         height: 45px;
         background-color: transparent;
@@ -181,8 +181,7 @@ $whiteSiteColor: #ffffff;
         -moz-border-radius: 0 3px 3px 0;
         border-radius: 0 3px 3px 0;
       }
-      textarea
-      {
+      textarea {
         width: calc(100% - 45px);
         background-color: transparent;
         border-color: $darkSiteColor;
@@ -196,8 +195,7 @@ $whiteSiteColor: #ffffff;
         -moz-border-radius: 0 3px 3px 0;
         border-radius: 0 3px 3px 0;
       }
-      fa-icon
-      {
+      fa-icon {
         width: 45px;
         display: flex;
         align-items: center;
@@ -211,21 +209,17 @@ $whiteSiteColor: #ffffff;
         border-radius: 3px 0 0 3px;
         font-size: 18px;
       }
-      input:focus ~ fa-icon
-      {
+      input:focus ~ fa-icon {
         background-color: transparent;
         color: $darkSiteColor;
       }
-      textarea:focus ~ fa-icon
-      {
+      textarea:focus ~ fa-icon {
         background-color: transparent;
         color: $darkSiteColor;
       }
     }
-    .form-alert
-    {
-      div
-      {
+    .form-alert {
+      div {
         font-family: 'Montserrat Alternates', sans-serif;
         font-size: 18px;
         color: $darkSiteColor;
@@ -233,15 +227,13 @@ $whiteSiteColor: #ffffff;
         display: flex;
         align-items: center;
         justify-content: center;
-        fa-icon
-        {
+        fa-icon {
           margin-right: 10px;
           font-size: 28px;
         }
       }
     }
-    button
-    {
+    button {
       margin: 25px 10px 10px 10px;
       width: calc(75% - 20px);
       background-color: $darkSiteColor;
@@ -250,14 +242,12 @@ $whiteSiteColor: #ffffff;
       color: $ultraLightSiteColor;
       font-size: 16px;
     }
-    button:disabled
-    {
+    button:disabled {
       cursor: not-allowed;
     }
   }
 }
-.notifications-item
-{
+.notifications-item {
   display: flex;
   flex-flow: row wrap;
   margin: 10px 0;
@@ -266,8 +256,7 @@ $whiteSiteColor: #ffffff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  .notifications-icon
-  {
+  .notifications-icon {
     width: 100px;
     font-size: 50px;
     background-color: $darkSiteColor;
@@ -276,16 +265,14 @@ $whiteSiteColor: #ffffff;
     align-items: center;
     justify-content: center;
   }
-  .notifications-text
-  {
+  .notifications-text {
     width: calc(100% - 100px);
-    background-color: rgba(255, 188, 73, .8);
+    background-color: rgba(255, 188, 73, 0.8);
     padding: 5px 20px;
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 18px;
     position: relative;
-    .notification-author
-    {
+    .notification-author {
       position: absolute;
       top: 0;
       right: 0;
@@ -296,8 +283,7 @@ $whiteSiteColor: #ffffff;
       -moz-border-radius: 0 0 0 5px;
       border-radius: 0 0 0 5px;
     }
-    .notification-date
-    {
+    .notification-date {
       position: absolute;
       bottom: 0;
       right: 0;
@@ -308,12 +294,10 @@ $whiteSiteColor: #ffffff;
       -moz-border-radius: 5px 0 0 0;
       border-radius: 5px 0 0 0;
     }
-    .notification-record
-    {
+    .notification-record {
       padding: 25px 0;
     }
-    .item-btn-container-table
-    {
+    .item-btn-container-table {
       width: 100%;
       display: flex;
       flex-flow: row nowrap;
@@ -322,8 +306,7 @@ $whiteSiteColor: #ffffff;
       bottom: 0;
       left: 0;
       .editBtn,
-      .deleteBtn
-      {
+      .deleteBtn {
         width: 50px;
         height: 30px;
         display: flex;
@@ -334,16 +317,15 @@ $whiteSiteColor: #ffffff;
         font-size: 20px;
         margin: 5px;
         border: 1px solid transparent;
-        -webkit-transition: all ease-in-out .25s;
-        -moz-transition: all ease-in-out .25s;
-        -ms-transition: all ease-in-out .25s;
-        -o-transition: all ease-in-out .25s;
-        transition: all ease-in-out .25s;
+        -webkit-transition: all ease-in-out 0.25s;
+        -moz-transition: all ease-in-out 0.25s;
+        -ms-transition: all ease-in-out 0.25s;
+        -o-transition: all ease-in-out 0.25s;
+        transition: all ease-in-out 0.25s;
         cursor: pointer;
       }
       .editBtn:hover,
-      .deleteBtn:hover
-      {
+      .deleteBtn:hover {
         background-color: $veryLightSiteColor;
         color: $darkSiteColor;
         border-color: $darkSiteColor;
@@ -352,8 +334,7 @@ $whiteSiteColor: #ffffff;
   }
 }
 .delBtn,
-.cancelBtn
-{
+.cancelBtn {
   background-color: $lightSiteColor;
   color: $darkSiteColor;
   width: 50px;
@@ -366,19 +347,17 @@ $whiteSiteColor: #ffffff;
   cursor: pointer;
 }
 .delBtn:hover,
-.cancelBtn:hover
-{
+.cancelBtn:hover {
   background-color: $darkSiteColor;
   color: $lightSiteColor;
   border: 1px solid $lightSiteColor;
 }
-h3, h1
-{
+h3,
+h1 {
   color: $lightSiteColor;
   text-align: center;
 }
-.btn-container
-{
+.btn-container {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -396,12 +375,10 @@ h3, h1
   border: 2px solid $lightSiteColor !important;
   font-family: 'Montserrat Alternates', sans-serif;
 }
-:host ::ng-deep .custom-toast .ui-toast-summary
-{
+:host ::ng-deep .custom-toast .ui-toast-summary {
   font-size: 20px !important;
 }
-:host ::ng-deep .custom-toast .ui-toast-detail
-{
+:host ::ng-deep .custom-toast .ui-toast-detail {
   text-decoration-style: dotted !important;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-success .ui-toast-close-icon {
@@ -410,48 +387,38 @@ h3, h1
 :host ::ng-deep .custom-toast .ui-toast-message-error .ui-toast-close-icon {
   color: $lightSiteColor !important;
 }
-.selectedDeletion
-{
+.selectedDeletion {
   font-size: 32px;
   text-decoration: underline;
   text-decoration-style: dotted;
   color: $ultraLightSiteColor;
 }
-@media screen and (max-width: 1450px)
-{
-  .notifications-container
-  {
+@media screen and (max-width: 1450px) {
+  .notifications-container {
     width: 1200px;
   }
 }
-@media screen and (max-width: 1250px)
-{
-  .notifications-container
-  {
+@media screen and (max-width: 1250px) {
+  .notifications-container {
     width: 1000px;
   }
 }
-@media screen and (max-width: 1170px)
-{
-  .showFormBtn
-  {
+@media screen and (max-width: 1170px) {
+  .showFormBtn {
     position: fixed;
     top: 16px;
     left: auto;
-    right: 230px;
+    right: 320px;
     width: 30px;
     height: 30px;
     font-size: 16px;
   }
 }
-@media screen and (max-width: 1050px)
-{
-  .notifications-container
-  {
+@media screen and (max-width: 1050px) {
+  .notifications-container {
     width: 100%;
   }
-  .notifications-item
-  {
+  .notifications-item {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -459,54 +426,41 @@ h3, h1
     border-right: none;
   }
 }
-@media screen and (max-width: 600px)
-{
-  .notifications-header
-  {
+@media screen and (max-width: 599px) {
+  .notifications-header {
     font-size: 20px;
   }
-  .notifications-item
-  {
-    .notifications-icon
-    {
+  .notifications-item {
+    .notifications-icon {
       display: none;
     }
-    .notifications-text
-    {
+    .notifications-text {
       width: 100%;
       font-size: 16px;
     }
   }
-  .showFormBtn
-  {
+  .showFormBtn {
     position: fixed;
     top: 13px;
     left: auto;
     right: 10px;
     font-size: 20px;
   }
-  .question-form
-  {
-    form
-    {
+  .question-form {
+    form {
       width: 100%;
     }
   }
 }
-@media screen and (max-width: 450px)
-{
-  .notifications-item
-  {
-    .notifications-text
-    {
+@media screen and (max-width: 450px) {
+  .notifications-item {
+    .notifications-text {
       font-size: 14px;
     }
   }
 }
-@media screen and (max-width: 330px)
-{
-  .showFormBtn
-  {
+@media screen and (max-width: 330px) {
+  .showFormBtn {
     top: 19px;
     width: 20px;
     height: 20px;

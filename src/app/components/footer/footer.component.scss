@@ -6,48 +6,43 @@ $middleSiteColor: #a65e09;
 $blackSiteColor: #000000;
 $whiteSiteColor: #ffffff;
 
-.transitionStyle
-{
-  -webkit-transition: all ease-in-out .25s;
-  -moz-transition: all ease-in-out .25s;
-  -ms-transition: all ease-in-out .25s;
-  -o-transition: all ease-in-out .25s;
-  transition: all ease-in-out .25s;
+.transitionStyle {
+  -webkit-transition: all ease-in-out 0.25s;
+  -moz-transition: all ease-in-out 0.25s;
+  -ms-transition: all ease-in-out 0.25s;
+  -o-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
 }
-.footer
-{
+.footer {
   width: 100%;
-  -webkit-box-shadow: 0 -5px 5px 0 rgba(50, 50, 50, .7);
-  -moz-box-shadow:    0 -5px 5px 0 rgba(50, 50, 50, .7);
-  box-shadow:         0 -5px 5px 0 rgba(50, 50, 50, .7);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  .footer-nav
-  {
+  .footer-nav {
     padding: 10px;
     background-color: $lightSiteColor;
+    border-bottom: 3px solid $middleSiteColor;
+    box-sizing: border-box;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
     justify-content: space-evenly;
-    a.nav-link
-    {
+    a.nav-link {
       font-size: 14px;
       font-family: 'Montserrat Alternates', sans-serif;
       font-weight: bold;
-      letter-spacing: .5px;
+      letter-spacing: 0.5px;
       text-decoration: none;
       color: $darkSiteColor;
       display: inline-block;
       margin-left: 5px;
       margin-right: 5px;
-      -webkit-transition: all ease-in-out .25s;
-      -moz-transition: all ease-in-out .25s;
-      -ms-transition: all ease-in-out .25s;
-      -o-transition: all ease-in-out .25s;
-      transition: all ease-in-out .25s;
+      -webkit-transition: all ease-in-out 0.25s;
+      -moz-transition: all ease-in-out 0.25s;
+      -ms-transition: all ease-in-out 0.25s;
+      -o-transition: all ease-in-out 0.25s;
+      transition: all ease-in-out 0.25s;
       position: relative;
       -webkit-user-select: none;
       -moz-user-select: none;
@@ -55,13 +50,11 @@ $whiteSiteColor: #ffffff;
       user-select: none;
     }
     a.nav-link:active,
-    a.nav-link:hover
-    {
+    a.nav-link:hover {
       color: $blackSiteColor;
     }
   }
-  .footer-info
-  {
+  .footer-info {
     background-color: $veryLightSiteColor;
     font-family: 'Montserrat Alternates', sans-serif;
     display: flex;
@@ -69,12 +62,10 @@ $whiteSiteColor: #ffffff;
     align-content: center;
     justify-content: center;
     padding: 20px;
-    .footer-logo
-    {
+    .footer-logo {
       margin-right: 25px;
     }
-    .footer-title
-    {
+    .footer-title {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -83,8 +74,7 @@ $whiteSiteColor: #ffffff;
       color: $darkSiteColor;
     }
   }
-  .footer-address
-  {
+  .footer-address {
     background-color: $veryLightSiteColor;
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 18px;
@@ -95,14 +85,12 @@ $whiteSiteColor: #ffffff;
     align-items: center;
     justify-content: center;
     text-align: center;
-    fa-icon
-    {
+    fa-icon {
       margin-right: 15px;
       font-size: 32px;
     }
   }
-  .footer-other
-  {
+  .footer-other {
     background-color: $lightSiteColor;
     font-family: 'Montserrat Alternates', sans-serif;
     padding: 10px;
@@ -111,8 +99,7 @@ $whiteSiteColor: #ffffff;
     flex-flow: row wrap;
     align-content: center;
     justify-content: center;
-    div.order-site
-    {
+    div.order-site {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -121,8 +108,7 @@ $whiteSiteColor: #ffffff;
       color: $darkSiteColor;
       margin: 0 10px;
     }
-    a
-    {
+    a {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -130,44 +116,33 @@ $whiteSiteColor: #ffffff;
       text-decoration: none;
       color: $darkSiteColor;
       margin: 0 10px;
-      fa-icon.gitHub
-      {
+      fa-icon.gitHub {
         font-size: 20px;
         margin-right: 5px;
       }
-      fa-icon.external-link
-      {
+      fa-icon.external-link {
         font-size: 16px;
         margin-left: 10px;
       }
     }
-    a:hover
-    {
+    a:hover {
       color: $blackSiteColor;
     }
   }
 }
-@media screen and (max-width: 990px)
-{
-  .footer
-  {
-    .footer-info
-    {
-      .footer-logo
-      {
+@media screen and (max-width: 990px) {
+  .footer {
+    .footer-info {
+      .footer-logo {
         margin-right: 0;
       }
     }
   }
 }
-@media screen and (max-width: 510px)
-{
-  .footer
-  {
-    .footer-info
-    {
-      .footer-title
-      {
+@media screen and (max-width: 510px) {
+  .footer {
+    .footer-info {
+      .footer-title {
         font-size: 24px;
       }
     }

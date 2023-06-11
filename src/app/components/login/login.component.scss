@@ -5,17 +5,38 @@ $ultraLightSiteColor: #ffffbf;
 $middleSiteColor: #a65e09;
 $blackSiteColor: #000000;
 $whiteSiteColor: #ffffff;
-
-.transitionStyle
-{
-  -webkit-transition: all ease-in-out .25s;
-  -moz-transition: all ease-in-out .25s;
-  -ms-transition: all ease-in-out .25s;
-  -o-transition: all ease-in-out .25s;
-  transition: all ease-in-out .25s;
+:host ::ng-deep .custom-toast .ui-toast-message-success {
+  color: $darkSiteColor !important;
+  background-color: $lightSiteColor !important;
+  border: 2px solid $darkSiteColor !important;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
-.loginBox
-{
+:host ::ng-deep .custom-toast .ui-toast-message-error {
+  color: $lightSiteColor !important;
+  background-color: $darkSiteColor !important;
+  border: 2px solid $lightSiteColor !important;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+:host ::ng-deep .custom-toast .ui-toast-summary {
+  font-size: 20px !important;
+}
+:host ::ng-deep .custom-toast .ui-toast-detail {
+  text-decoration-style: dotted !important;
+}
+:host ::ng-deep .custom-toast .ui-toast-message-success .ui-toast-close-icon {
+  color: $darkSiteColor !important;
+}
+:host ::ng-deep .custom-toast .ui-toast-message-error .ui-toast-close-icon {
+  color: $lightSiteColor !important;
+}
+.transitionStyle {
+  -webkit-transition: all ease-in-out 0.25s;
+  -moz-transition: all ease-in-out 0.25s;
+  -ms-transition: all ease-in-out 0.25s;
+  -o-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+}
+.loginBox {
   min-height: calc(100vh - 104px);
   width: 600px;
   margin: 20px auto;
@@ -23,9 +44,8 @@ $whiteSiteColor: #ffffff;
   align-items: center;
   justify-content: center;
 }
-.login-container
-{
-  background-color: rgba(255, 188, 73, .8);
+.login-container {
+  background-color: rgba(255, 188, 73, 0.8);
   border: 3px solid $darkSiteColor;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -36,15 +56,13 @@ $whiteSiteColor: #ffffff;
   align-items: center;
   justify-content: center;
 }
-.login-title
-{
+.login-title {
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 24px;
   text-align: center;
   margin-bottom: 40px;
 }
-.login-subtitle
-{
+.login-subtitle {
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 20px;
   text-align: center;
@@ -54,23 +72,18 @@ $whiteSiteColor: #ffffff;
   width: 100%;
   background-color: $darkSiteColor;
 }
-.form-container
-{
-  form
-  {
-    span.ui-float-label
-    {
+.form-container {
+  form {
+    span.ui-float-label {
       margin-top: 20px;
       display: flex;
       flex-flow: row-reverse nowrap;
-      label
-      {
+      label {
         font-family: 'Montserrat Alternates', sans-serif;
         color: $middleSiteColor;
         margin-left: 50px;
       }
-      fa-icon
-      {
+      fa-icon {
         width: 45px;
         height: 45px;
         display: flex;
@@ -85,8 +98,7 @@ $whiteSiteColor: #ffffff;
         border-radius: 3px 0 0 3px;
         font-size: 18px;
       }
-      input
-      {
+      input {
         width: calc(100% - 45px);
         height: 45px;
         background-color: transparent;
@@ -98,14 +110,12 @@ $whiteSiteColor: #ffffff;
         -moz-border-radius: 0 3px 3px 0;
         border-radius: 0 3px 3px 0;
       }
-      input:focus ~ fa-icon
-      {
+      input:focus ~ fa-icon {
         background-color: transparent;
         color: $darkSiteColor;
       }
     }
-    button
-    {
+    button {
       margin-top: 20px;
       width: 100%;
       height: 45px;
@@ -115,26 +125,21 @@ $whiteSiteColor: #ffffff;
       color: $lightSiteColor;
       font-size: 16px;
     }
-    button:disabled
-    {
+    button:disabled {
       cursor: not-allowed;
     }
-    button:focus
-    {
+    button:focus {
       -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 1);
-      -moz-box-shadow:    0 0 5px 0 rgba(0, 0, 0, 1);
-      box-shadow:         0 0 5px 0 rgba(0, 0, 0, 1);
+      -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 1);
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 1);
     }
   }
 }
-@media screen and (max-width: 650px)
-{
-  .loginBox
-  {
+@media screen and (max-width: 650px) {
+  .loginBox {
     width: 100%;
   }
-  .login-container
-  {
+  .login-container {
     width: 100%;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -142,8 +147,7 @@ $whiteSiteColor: #ffffff;
     border-left: none;
     border-right: none;
   }
-  .login-title
-  {
+  .login-title {
     font-size: 24px;
   }
 }

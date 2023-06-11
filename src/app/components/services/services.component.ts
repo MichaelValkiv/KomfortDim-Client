@@ -9,9 +9,8 @@ import {
   faLightbulb,
   faToolbox,
   faTools,
-  faBath,
   faTemperatureHigh,
-  faBolt,
+  faPlug,
   faWater,
   faTint,
   faBriefcase,
@@ -31,12 +30,11 @@ export class ServicesComponent implements OnInit, OnDestroy {
   faHouseDamage = faHouseDamage;
   faWind = faWind;
   faHammer = faHammer;
-  faLightbulb = faLightbulb;
+  faLightBulb = faLightbulb;
   faToolbox = faToolbox;
   faTools = faTools;
-  faBath = faBath;
   faTemperatureHigh = faTemperatureHigh;
-  faBolt = faBolt;
+  faBolt = faPlug;
   faWater = faWater;
   faTint = faTint;
   faBriefcase = faBriefcase;

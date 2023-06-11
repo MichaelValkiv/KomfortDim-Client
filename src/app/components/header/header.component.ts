@@ -1,16 +1,25 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { faInfoCircle, faFileSignature, faBars, faSignInAlt, faSignOutAlt, faQuestionCircle, faBell, faCog, faTools } from '@fortawesome/free-solid-svg-icons';
+import {
+  faInfoCircle,
+  faFileContract,
+  faBars,
+  faSignInAlt,
+  faSignOutAlt,
+  faQuestionCircle,
+  faBell,
+  faCog,
+  faTools,
+} from '@fortawesome/free-solid-svg-icons';
 import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-
   faInfoCircle = faInfoCircle;
-  faFileSignature = faFileSignature;
+  faFileSignature = faFileContract;
   faBars = faBars;
   faSignInAlt = faSignInAlt;
   faSignOutAlt = faSignOutAlt;
@@ -21,13 +30,11 @@ export class HeaderComponent implements OnInit {
 
   @Output() public sideNavToggle = new EventEmitter();
 
-  constructor( public authenticationService: AuthenticationService ) { }
+  constructor(public authenticationService: AuthenticationService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   public onToggleSideNav = () => {
     this.sideNavToggle.emit();
-  }
-
+  };
 }

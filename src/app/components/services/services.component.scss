@@ -6,13 +6,12 @@ $middleSiteColor: #a65e09;
 $blackSiteColor: #000000;
 $whiteSiteColor: #ffffff;
 
-.transitionStyle
-{
-  -webkit-transition: all ease-in-out .25s;
-  -moz-transition: all ease-in-out .25s;
-  -ms-transition: all ease-in-out .25s;
-  -o-transition: all ease-in-out .25s;
-  transition: all ease-in-out .25s;
+.transitionStyle {
+  -webkit-transition: all ease-in-out 0.25s;
+  -moz-transition: all ease-in-out 0.25s;
+  -ms-transition: all ease-in-out 0.25s;
+  -o-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-success {
   color: $darkSiteColor !important;
@@ -26,12 +25,10 @@ $whiteSiteColor: #ffffff;
   border: 2px solid $lightSiteColor !important;
   font-family: 'Montserrat Alternates', sans-serif;
 }
-:host ::ng-deep .custom-toast .ui-toast-summary
-{
+:host ::ng-deep .custom-toast .ui-toast-summary {
   font-size: 20px !important;
 }
-:host ::ng-deep .custom-toast .ui-toast-detail
-{
+:host ::ng-deep .custom-toast .ui-toast-detail {
   text-decoration-style: dotted !important;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-success .ui-toast-close-icon {
@@ -40,44 +37,62 @@ $whiteSiteColor: #ffffff;
 :host ::ng-deep .custom-toast .ui-toast-message-error .ui-toast-close-icon {
   color: $lightSiteColor !important;
 }
-.progressSpinnerBox
-{
+.progressSpinnerBox {
   width: 100%;
   position: fixed;
   top: 65px;
   left: 0;
 }
-:host ::ng-deep
-{
-  .progressBarStyle .ui-progressbar
-  {
+:host ::ng-deep {
+  .progressBarStyle .ui-progressbar {
     background-color: $ultraLightSiteColor !important;
     -webkit-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
     border-radius: 0 !important;
   }
 
-  .progressBarStyle .ui-progressbar .ui-progressbar-label
-  {
+  .progressBarStyle .ui-progressbar .ui-progressbar-label {
     color: $darkSiteColor !important;
   }
 
-  .progressBarStyle .ui-progressbar .ui-progressbar-value
-  {
+  .progressBarStyle .ui-progressbar .ui-progressbar-value {
     background: $darkSiteColor !important;
   }
 }
-.services-title
-{
+.services-title {
   font-family: 'Montserrat Alternates', sans-serif;
   color: $darkSiteColor;
   font-size: 32px;
   width: calc(100% - 6px);
   text-align: center;
-  background: rgb(255,255,191);
-  background: -moz-linear-gradient(left, rgba(255,255,191,1) 0%, rgba(255,255,191,1) 15%, rgba(255,188,73,1) 49%, rgba(255,188,73,1) 51%, rgba(255,255,191,1) 85%, rgba(255,255,191,1) 100%);
-  background: -webkit-linear-gradient(left, rgba(255,255,191,1) 0%,rgba(255,255,191,1) 15%,rgba(255,188,73,1) 49%,rgba(255,188,73,1) 51%,rgba(255,255,191,1) 85%,rgba(255,255,191,1) 100%);
-  background: linear-gradient(to right, rgba(255,255,191,1) 0%,rgba(255,255,191,1) 15%,rgba(255,188,73,1) 49%,rgba(255,188,73,1) 51%,rgba(255,255,191,1) 85%,rgba(255,255,191,1) 100%);
+  background: rgb(255, 255, 191);
+  background: -moz-linear-gradient(
+    left,
+    rgba(255, 255, 191, 1) 0%,
+    rgba(255, 255, 191, 1) 15%,
+    rgba(255, 188, 73, 1) 49%,
+    rgba(255, 188, 73, 1) 51%,
+    rgba(255, 255, 191, 1) 85%,
+    rgba(255, 255, 191, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 191, 1) 0%,
+    rgba(255, 255, 191, 1) 15%,
+    rgba(255, 188, 73, 1) 49%,
+    rgba(255, 188, 73, 1) 51%,
+    rgba(255, 255, 191, 1) 85%,
+    rgba(255, 255, 191, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 191, 1) 0%,
+    rgba(255, 255, 191, 1) 15%,
+    rgba(255, 188, 73, 1) 49%,
+    rgba(255, 188, 73, 1) 51%,
+    rgba(255, 255, 191, 1) 85%,
+    rgba(255, 255, 191, 1) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffbf', endColorstr='#ffffbf',GradientType=1 );
   margin: 20px 0 10px 0;
   padding: 20px 10px;
@@ -86,26 +101,24 @@ $whiteSiteColor: #ffffff;
   -ms-user-select: none;
   user-select: none;
 }
-.services-container
-{
+.services-container {
   width: 1400px;
   min-height: calc(100vh - 64px);
   margin: 0 auto 10px;
   display: flex;
   flex-flow: row wrap;
 }
-.service-item
-{
+.service-item {
   width: calc(33.33333% - 20px);
   margin: 10px 10px;
   border: 3px solid $darkSiteColor;
-  background-color: rgba(255, 188, 73, .8);
+  border-radius: 5px;
+  background-color: rgba(255, 188, 73, 0.8);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  .service-icon
-  {
+  .service-icon {
     background-color: rgba(64, 49, 33, 1);
     color: $lightSiteColor;
     height: 200px;
@@ -114,8 +127,7 @@ $whiteSiteColor: #ffffff;
     justify-content: center;
     font-size: 100px;
   }
-  .service-description
-  {
+  .service-description {
     height: 250px;
     font-family: 'Montserrat Alternates', sans-serif;
     color: $darkSiteColor;
@@ -127,62 +139,47 @@ $whiteSiteColor: #ffffff;
     justify-content: center;
   }
 }
-@media screen and (max-width: 1450px)
-{
-  .services-container
-  {
+@media screen and (max-width: 1450px) {
+  .services-container {
     width: 1200px;
   }
 }
-@media screen and (max-width: 1250px)
-{
-  .services-title
-  {
+@media screen and (max-width: 1250px) {
+  .services-title {
     font-size: 24px;
   }
-  .services-container
-  {
+  .services-container {
     width: 1000px;
   }
-  .service-item
-  {
-    .service-description
-    {
+  .service-item {
+    .service-description {
       font-size: 18px;
       height: 150px;
     }
   }
 }
-@media screen and (max-width: 1050px)
-{
-  .services-container
-  {
+@media screen and (max-width: 1050px) {
+  .services-container {
     width: 100%;
   }
-  .service-item
-  {
+  .service-item {
     width: calc(50% - 20px);
-    .service-description
-    {
+    .service-description {
       font-size: 18px;
       height: 150px;
     }
   }
 }
-@media screen and (max-width: 600px)
-{
-  .services-title
-  {
+@media screen and (max-width: 600px) {
+  .services-title {
     font-size: 20px;
   }
-  .service-item
-  {
+  .service-item {
     width: 100%;
     margin: 10px 0;
     border-right: none;
     border-left: none;
-    .service-description
-    {
+    .service-description {
       font-size: 18px;
       height: 150px;
     }
