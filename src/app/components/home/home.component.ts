@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.pageTitle.setTitle('Комфорт-Дім - Опис Компанії');
+    this.pageTitle.setTitle('Комфорт-Дім - Про Компанію');
     this.metaService.addTags([
       {
         name: 'keywords',
