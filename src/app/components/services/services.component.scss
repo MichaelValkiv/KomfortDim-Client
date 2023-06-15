@@ -40,12 +40,13 @@ $whiteSiteColor: #ffffff;
 .progressSpinnerBox {
   width: 100%;
   position: fixed;
-  top: 65px;
+  top: 61px;
   left: 0;
+  z-index: 1000;
 }
 :host ::ng-deep {
   .progressBarStyle .ui-progressbar {
-    background-color: $ultraLightSiteColor !important;
+    background-color: transparent !important;
     -webkit-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
     border-radius: 0 !important;

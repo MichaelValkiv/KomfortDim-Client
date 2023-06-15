@@ -19,65 +19,74 @@ $whiteSiteColor: #ffffff;
 }
 .li-item,
 .li-icon {
-  height: 36px;
+  height: 100%;
   min-width: 38px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
   box-sizing: border-box;
-  border: 1px solid transparent;
+  position: relative;
+
   &:hover {
-    border-color: $darkSiteColor;
+    background-color: rgba($darkSiteColor, 0.2);
+    &::after {
+      height: 6px;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: $veryLightSiteColor;
   }
 }
-
+.nav-flex-box {
+  height: 100%;
+}
 .active-link {
   background-color: $darkSiteColor;
+
+  &:hover {
+    background-color: $darkSiteColor;
+  }
+
+  &::after {
+    height: 6px;
+  }
 
   a.nav-link,
   a.nav-link-icon {
     color: $veryLightSiteColor;
   }
 }
-a.nav-link-icon {
-  padding: 2px 10px 0;
-  font-size: 16px;
+a.nav-link-icon,
+a.nav-link {
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 15px;
   font-weight: bold;
   text-decoration: none;
   color: $darkSiteColor;
-  display: inline-block;
-  -webkit-transition: all ease-in-out 0.15s;
-  -moz-transition: all ease-in-out 0.15s;
-  -ms-transition: all ease-in-out 0.15s;
-  -o-transition: all ease-in-out 0.15s;
-  transition: all ease-in-out 0.15s;
   position: relative;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
+a.nav-link-icon {
+  font-size: 16px;
+}
 a.nav-link {
-  padding: 2px 10px 0;
   font-size: 14px;
   font-family: 'Montserrat Alternates', sans-serif;
-  font-weight: bold;
   letter-spacing: 0.5px;
-  text-decoration: none;
   text-transform: uppercase;
-  color: $darkSiteColor;
-  display: inline-block;
-  -webkit-transition: all ease-in-out 0.15s;
-  -moz-transition: all ease-in-out 0.15s;
-  -ms-transition: all ease-in-out 0.15s;
-  -o-transition: all ease-in-out 0.15s;
-  transition: all ease-in-out 0.15s;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+
   fa-icon {
     font-size: 16px;
   }
@@ -86,6 +95,7 @@ a.nav-link {
 a.site-name {
   display: inline-block;
   position: relative;
+  margin-left: 15px;
   width: 200px;
   text-decoration: none;
   color: $darkSiteColor;
@@ -118,6 +128,9 @@ a.site-name:hover {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .nav-text {
   margin-left: 5px;

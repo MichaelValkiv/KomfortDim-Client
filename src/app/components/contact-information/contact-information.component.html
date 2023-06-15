@@ -1,82 +1,195 @@
 <div class="progressSpinnerBox" [hidden]="!isDataLoading">
-  <p-progressBar mode="indeterminate" [style]="{'height': '10px'}" class="progressBarStyle"></p-progressBar>
+  <p-progressBar
+    mode="indeterminate"
+    [style]="{ height: '5px' }"
+    class="progressBarStyle"
+  ></p-progressBar>
 </div>
-<p-toast styleClass="custom-toast" [showTransitionOptions]="'800ms ease-out'"
-         [hideTransitionOptions]="'800ms ease-out'"></p-toast>
+<p-toast
+  styleClass="custom-toast"
+  [showTransitionOptions]="'800ms ease-out'"
+  [hideTransitionOptions]="'800ms ease-out'"
+></p-toast>
 <div class="contact-container transitionStyle">
-
   <div class="contact-title transitionStyle">
-    Товариство з обмеженою відповідальністю<br>"Управляюча компанія "Комфорт-Дім"
+    Товариство з обмеженою відповідальністю<br />"Управляюча компанія
+    "Комфорт-Дім"
   </div>
 
   <div class="allContacts1" *ngFor="let contactRecord of allContacts">
-    <div class="contact-info-item transitionStyle"
-         *ngIf="contactRecord.contact_type == 'Контактна Інформація Компанії (Державні Реєстри)' ||
-                contactRecord.contact_type == 'Контактна Інформація Компанії (Адреса)' ||
-                contactRecord.contact_type == 'Контактна Інформація Компанії (Банківські Реквізити)' ||
-                contactRecord.contact_type == 'Контактна Інформація Компанії (Стаціонарний Телефон)' ||
-                contactRecord.contact_type == 'Контактна Інформація Компанії (Мобільний номер)' ||
-                contactRecord.contact_type == 'Контактна Інформація Компанії (Електронна Пошта)' ||
-                contactRecord.contact_type == 'Загальний Контактний Запис'">
-      <div class="contact-info-icon transitionStyle" [ngClass]="{'credit-card': contactRecord.contact_type == 'Контактна Інформація Компанії (Банківські Реквізити)'}">
-        <fa-icon [icon]="faIdCard" *ngIf="contactRecord.contact_type == 'Контактна Інформація Компанії (Державні Реєстри)'"></fa-icon>
-        <fa-icon [icon]="faMapMarkerAlt" *ngIf="contactRecord.contact_type == 'Контактна Інформація Компанії (Адреса)'"></fa-icon>
-        <fa-icon [icon]="faCreditCard" *ngIf="contactRecord.contact_type == 'Контактна Інформація Компанії (Банківські Реквізити)'"></fa-icon>
-        <fa-icon [icon]="faPhone" *ngIf="contactRecord.contact_type == 'Контактна Інформація Компанії (Стаціонарний Телефон)'"></fa-icon>
-        <fa-icon [icon]="faMobileAlt" *ngIf="contactRecord.contact_type == 'Контактна Інформація Компанії (Мобільний номер)'"></fa-icon>
-        <fa-icon [icon]="faEnvelope" *ngIf="contactRecord.contact_type == 'Контактна Інформація Компанії (Електронна Пошта)'"></fa-icon>
+    <div
+      class="contact-info-item transitionStyle"
+      *ngIf="
+        contactRecord.contact_type ==
+          'Контактна Інформація Компанії (Державні Реєстри)' ||
+        contactRecord.contact_type ==
+          'Контактна Інформація Компанії (Адреса)' ||
+        contactRecord.contact_type ==
+          'Контактна Інформація Компанії (Банківські Реквізити)' ||
+        contactRecord.contact_type ==
+          'Контактна Інформація Компанії (Стаціонарний Телефон)' ||
+        contactRecord.contact_type ==
+          'Контактна Інформація Компанії (Мобільний номер)' ||
+        contactRecord.contact_type ==
+          'Контактна Інформація Компанії (Електронна Пошта)' ||
+        contactRecord.contact_type == 'Загальний Контактний Запис'
+      "
+    >
+      <div
+        class="contact-info-icon transitionStyle"
+        [ngClass]="{
+          'credit-card':
+            contactRecord.contact_type ==
+            'Контактна Інформація Компанії (Банківські Реквізити)'
+        }"
+      >
+        <fa-icon
+          [icon]="faIdCard"
+          *ngIf="
+            contactRecord.contact_type ==
+            'Контактна Інформація Компанії (Державні Реєстри)'
+          "
+        ></fa-icon>
+        <fa-icon
+          [icon]="faMapMarkerAlt"
+          *ngIf="
+            contactRecord.contact_type ==
+            'Контактна Інформація Компанії (Адреса)'
+          "
+        ></fa-icon>
+        <fa-icon
+          [icon]="faCreditCard"
+          *ngIf="
+            contactRecord.contact_type ==
+            'Контактна Інформація Компанії (Банківські Реквізити)'
+          "
+        ></fa-icon>
+        <fa-icon
+          [icon]="faPhone"
+          *ngIf="
+            contactRecord.contact_type ==
+            'Контактна Інформація Компанії (Стаціонарний Телефон)'
+          "
+        ></fa-icon>
+        <fa-icon
+          [icon]="faMobileAlt"
+          *ngIf="
+            contactRecord.contact_type ==
+            'Контактна Інформація Компанії (Мобільний номер)'
+          "
+        ></fa-icon>
+        <fa-icon
+          [icon]="faEnvelope"
+          *ngIf="
+            contactRecord.contact_type ==
+            'Контактна Інформація Компанії (Електронна Пошта)'
+          "
+        ></fa-icon>
       </div>
-      <div class="contact-info-text transitionStyle" [ngClass]="{'bank-number': contactRecord.contact_type == 'Контактна Інформація Компанії (Банківські Реквізити)'}">{{contactRecord.contact}}</div>
+      <div
+        class="contact-info-text transitionStyle"
+        [ngClass]="{
+          'bank-number':
+            contactRecord.contact_type ==
+            'Контактна Інформація Компанії (Банківські Реквізити)'
+        }"
+      >
+        {{ contactRecord.contact }}
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-title transitionStyle">Графік роботи</div>
+
+  <div class="allContacts1" *ngFor="let contactRecord of allContacts">
+    <div
+      class="contact-info-item transitionStyle"
+      *ngIf="
+        contactRecord.contact_type == 'Графік Роботи Компанії' ||
+        contactRecord.contact_type == 'Графік Роботи Компанії (Обід)' ||
+        contactRecord.contact_type == 'Графік Роботи Компанії (Вихідні)'
+      "
+    >
+      <div class="contact-info-icon transitionStyle">
+        <fa-icon
+          [icon]="faCalendarAlt"
+          *ngIf="contactRecord.contact_type == 'Графік Роботи Компанії'"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faMugHot"
+          *ngIf="contactRecord.contact_type == 'Графік Роботи Компанії (Обід)'"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faWindowClose"
+          *ngIf="
+            contactRecord.contact_type == 'Графік Роботи Компанії (Вихідні)'
+          "
+        ></fa-icon>
+      </div>
+      <div class="contact-info-text transitionStyle">
+        {{ contactRecord.contact }}
+      </div>
     </div>
   </div>
 
   <div class="contact-title transitionStyle">
-    Графік роботи
+    Телефони диспетчерської служби при аваріях у вихідні дні, та до 8:00 і після
+    17:00 в робочі дні
   </div>
 
   <div class="allContacts1" *ngFor="let contactRecord of allContacts">
-    <div class="contact-info-item transitionStyle"
-         *ngIf="contactRecord.contact_type == 'Графік Роботи Компанії' ||
-                contactRecord.contact_type == 'Графік Роботи Компанії (Обід)' ||
-                contactRecord.contact_type == 'Графік Роботи Компанії (Вихідні)'">
+    <div
+      class="contact-info-item transitionStyle"
+      *ngIf="
+        contactRecord.contact_type == 'Телефони Диспетчерських Служб' ||
+        contactRecord.contact_type ==
+          'Телефони Диспетчерських Служб (Сантехніки)' ||
+        contactRecord.contact_type ==
+          'Телефони Диспетчерських Служб (Електромонтери)'
+      "
+    >
       <div class="contact-info-icon transitionStyle">
-        <fa-icon [icon]="faCalendarAlt" *ngIf="contactRecord.contact_type == 'Графік Роботи Компанії'"></fa-icon>
-        <fa-icon [icon]="faMugHot" *ngIf="contactRecord.contact_type == 'Графік Роботи Компанії (Обід)'"></fa-icon>
-        <fa-icon [icon]="faWindowClose" *ngIf="contactRecord.contact_type == 'Графік Роботи Компанії (Вихідні)'"></fa-icon>
+        <fa-icon
+          [icon]="faPhoneVolume"
+          *ngIf="contactRecord.contact_type == 'Телефони Диспетчерських Служб'"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faTint"
+          *ngIf="
+            contactRecord.contact_type ==
+            'Телефони Диспетчерських Служб (Сантехніки)'
+          "
+        ></fa-icon>
+        <fa-icon
+          [icon]="faBolt"
+          *ngIf="
+            contactRecord.contact_type ==
+            'Телефони Диспетчерських Служб (Електромонтери)'
+          "
+        ></fa-icon>
       </div>
-      <div class="contact-info-text transitionStyle">{{contactRecord.contact}}</div>
+      <div class="contact-info-text transitionStyle">
+        {{ contactRecord.contact }}
+      </div>
     </div>
   </div>
 
-  <div class="contact-title transitionStyle">
-    Телефони диспетчерської служби при аваріях у вихідні дні, та до 8:00 і після 17:00 в робочі дні
-  </div>
+  <div class="contact-title transitionStyle">Додаткові Контактні Дані</div>
 
   <div class="allContacts1" *ngFor="let contactRecord of allContacts">
-    <div class="contact-info-item transitionStyle"
-         *ngIf="contactRecord.contact_type == 'Телефони Диспетчерських Служб' ||
-                contactRecord.contact_type == 'Телефони Диспетчерських Служб (Сантехніки)' ||
-                contactRecord.contact_type == 'Телефони Диспетчерських Служб (Електромонтери)'">
+    <div
+      class="contact-info-item transitionStyle"
+      *ngIf="contactRecord.contact_type == 'Загальний Контактний Запис'"
+    >
       <div class="contact-info-icon transitionStyle">
-        <fa-icon [icon]="faPhoneVolume" *ngIf="contactRecord.contact_type == 'Телефони Диспетчерських Служб'"></fa-icon>
-        <fa-icon [icon]="faTint" *ngIf="contactRecord.contact_type == 'Телефони Диспетчерських Служб (Сантехніки)'"></fa-icon>
-        <fa-icon [icon]="faBolt" *ngIf="contactRecord.contact_type == 'Телефони Диспетчерських Служб (Електромонтери)'"></fa-icon>
+        <fa-icon
+          [icon]="faAddressBook"
+          *ngIf="contactRecord.contact_type == 'Загальний Контактний Запис'"
+        ></fa-icon>
       </div>
-      <div class="contact-info-text transitionStyle">{{contactRecord.contact}}</div>
-    </div>
-  </div>
-
-  <div class="contact-title transitionStyle">
-    Додаткові Контактні Дані
-  </div>
-
-  <div class="allContacts1" *ngFor="let contactRecord of allContacts">
-    <div class="contact-info-item transitionStyle"
-         *ngIf="contactRecord.contact_type == 'Загальний Контактний Запис'">
-      <div class="contact-info-icon transitionStyle">
-        <fa-icon [icon]="faAddressBook" *ngIf="contactRecord.contact_type == 'Загальний Контактний Запис'"></fa-icon>
+      <div class="contact-info-text transitionStyle">
+        {{ contactRecord.contact }}
       </div>
-      <div class="contact-info-text transitionStyle">{{contactRecord.contact}}</div>
     </div>
   </div>
 </div>

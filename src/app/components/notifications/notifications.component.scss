@@ -16,8 +16,9 @@ $whiteSiteColor: #ffffff;
 .progressSpinnerBox {
   width: 100%;
   position: fixed;
-  top: 65px;
+  top: 61px;
   left: 0;
+  z-index: 1000;
 }
 .notifications-header {
   font-family: 'Montserrat Alternates', sans-serif;
@@ -89,7 +90,7 @@ $whiteSiteColor: #ffffff;
 }
 :host ::ng-deep {
   .progressBarStyle .ui-progressbar {
-    background-color: $ultraLightSiteColor !important;
+    background-color: transparent !important;
     -webkit-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
     border-radius: 0 !important;
@@ -408,7 +409,7 @@ h1 {
     position: fixed;
     top: 16px;
     left: auto;
-    right: 320px;
+    right: 300px;
     width: 30px;
     height: 30px;
     font-size: 16px;
