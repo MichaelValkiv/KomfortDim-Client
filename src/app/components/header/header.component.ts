@@ -1,16 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {
-  faInfoCircle,
-  faFileContract,
-  faBars,
-  faSignInAlt,
-  faSignOutAlt,
-  faQuestionCircle,
-  faBell,
-  faCog,
-  faTools,
-} from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { AuthenticationService } from '../../services/authentication.service';
+import { ThemesService } from '../../services/themes.service';
 
 @Component({
   selector: 'app-header',
@@ -18,23 +9,27 @@ import { AuthenticationService } from '../../services/authentication.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  faInfoCircle = faInfoCircle;
-  faFileSignature = faFileContract;
   faBars = faBars;
-  faSignInAlt = faSignInAlt;
-  faSignOutAlt = faSignOutAlt;
-  faQuestionCircle = faQuestionCircle;
-  faBell = faBell;
-  faCog = faCog;
-  faTools = faTools;
+
+  isLight: boolean;
 
   @Output() public sideNavToggle = new EventEmitter();
 
-  constructor(public authenticationService: AuthenticationService) {}
+  constructor(
+    public authenticationService: AuthenticationService,
+    private themesService: ThemesService
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.isLight = this.themesService.getTheme() !== 'dark';
+  }
 
-  public onToggleSideNav = () => {
+  toggleTheme() {
+    this.isLight = !this.isLight;
+    this.themesService.changeTheme(this.isLight);
+  }
+
+  onToggleSideNav() {
     this.sideNavToggle.emit();
-  };
+  }
 }

@@ -1,317 +1,263 @@
-$darkSiteColor: #403121;
-$lightSiteColor: #ed9728;
-$veryLightSiteColor: #ffbc49;
-$ultraLightSiteColor: #ffffbf;
-$middleSiteColor: #a65e09;
-$blackSiteColor: #000000;
-$whiteSiteColor: #ffffff;
-
-.transitionStyle
-{
-  -webkit-transition: all ease-in-out .25s;
-  -moz-transition: all ease-in-out .25s;
-  -ms-transition: all ease-in-out .25s;
-  -o-transition: all ease-in-out .25s;
-  transition: all ease-in-out .25s;
+.transitionStyle {
+  -webkit-transition: all ease-in-out 0.25s;
+  -moz-transition: all ease-in-out 0.25s;
+  -ms-transition: all ease-in-out 0.25s;
+  -o-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
 }
-.dashboard-container
-{
+.dashboard-container {
   width: 100%;
   margin: 0 auto 20px;
   min-height: calc(100vh - 64px);
 }
-:host ::ng-deep
-{
-  .ui-tabview
-  {
+:host ::ng-deep {
+  .ui-tabview {
     font-family: 'Montserrat Alternates', sans-serif;
-    background-color: rgba(255, 188, 73, .8) !important;
+    background-color: rgba(var(--veryLightSiteColor-rgb), 0.8) !important;
   }
-  ul.ui-tabview-nav
-  {
-    border-color: $darkSiteColor !important;
+  ul.ui-tabview-nav {
+    border-color: var(--darkSiteColor) !important;
   }
-  .ui-widget, .ui-widget *
-  {
-    border-color: $darkSiteColor !important;
+  .ui-widget,
+  .ui-widget * {
+    border-color: var(--darkSiteColor) !important;
   }
-  .ui-tabview-nav > li
-  {
-    border-color: $darkSiteColor !important;
+  .ui-tabview-nav > li {
+    border-color: var(--darkSiteColor) !important;
     -webkit-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
     border-radius: 0 !important;
   }
-  .ui-tabview-nav > li:active
-  {
+  .ui-tabview-nav > li:active {
     outline: none;
   }
-  .ui-tabview-nav > li > a
-  {
-    background-color: $veryLightSiteColor;
-    color: $darkSiteColor;
+  .ui-tabview-nav > li > a {
+    background-color: var(--veryLightSiteColor);
+    color: var(--darkSiteColor);
   }
-  .ui-tabview-selected
-  {
-    border: 1px solid $darkSiteColor !important;
+  .ui-tabview-selected {
+    border: 1px solid var(--darkSiteColor) !important;
     outline: none;
   }
-  .ui-tabview-selected > a
-  {
-    background-color: $darkSiteColor !important;
-    color: $veryLightSiteColor !important;
+  .ui-tabview.ui-tabview-top .ui-tabview-nav li > a {
+    color: var(--darkSiteColor);
   }
-  .ui-tabview-panels
-  {
+  .ui-tabview-selected > a {
+    background-color: var(--darkSiteColor) !important;
+    color: var(--veryLightSiteColor) !important;
+  }
+  .ui-tabview-panels {
     background-color: transparent !important;
   }
-  .ui-panel
-  {
+  .ui-panel {
     font-family: 'Montserrat Alternates', sans-serif;
   }
-  .ui-dataview-header
-  {
+  .ui-dataview-header {
     background-color: transparent !important;
-    border-color: $darkSiteColor !important;
-    border-bottom: 1px solid $darkSiteColor !important;
+    border-color: var(--darkSiteColor) !important;
+    border-bottom: 1px solid var(--darkSiteColor) !important;
     margin-top: 5px !important;
   }
-  .ui-dataview-content
-  {
+  .ui-dataview-content {
     font-family: 'Montserrat Alternates', sans-serif;
     background-color: transparent !important;
-    border-color: $darkSiteColor !important;
+    border-color: var(--darkSiteColor) !important;
     margin: 15px 0 !important;
   }
-  .ui-inputtext::placeholder
-  {
-    color: $middleSiteColor !important;
+  .ui-inputtext::placeholder {
+    color: var(--middleSiteColor) !important;
   }
   .ui-inputtext,
-  .ui-dropdown
-  {
+  .ui-dropdown {
     font-family: 'Montserrat Alternates', sans-serif;
-    background-color: $veryLightSiteColor !important;
-    border-color: $middleSiteColor !important;
-    color: $darkSiteColor !important;
+    background-color: var(--veryLightSiteColor) !important;
+    border-color: var(--middleSiteColor) !important;
+    color: var(--darkSiteColor) !important;
   }
-  .ui-dropdown
-  {
+  .ui-dropdown {
     padding-right: 10px;
   }
-  .ui-dropdown-trigger
-  {
-    background-color: $middleSiteColor !important;
+  .ui-dropdown-trigger {
+    background-color: var(--middleSiteColor) !important;
   }
-  .ui-dropdown-panel
-  {
-    border-color: $middleSiteColor !important;
+  .ui-dropdown-panel {
+    border-color: var(--middleSiteColor) !important;
   }
-  .ui-dropdown-item
-  {
-    background-color: $veryLightSiteColor !important;
+  .ui-dropdown-item {
+    background-color: var(--veryLightSiteColor) !important;
     font-family: 'Montserrat Alternates', sans-serif;
   }
-  .ui-dropdown-item:hover
-  {
-    background-color: $lightSiteColor !important;
+  .ui-dropdown-item:hover {
+    background-color: var(--lightSiteColor) !important;
   }
-  .ui-dropdown-trigger-icon
-  {
-    color: $veryLightSiteColor !important;
+  .ui-dropdown-trigger-icon {
+    color: var(--veryLightSiteColor) !important;
   }
-  .ui-paginator
-  {
-    background-color: $darkSiteColor;
-    border-color: $darkSiteColor !important;
+  .ui-paginator {
+    background-color: var(--darkSiteColor);
+    border-color: var(--darkSiteColor) !important;
     margin-bottom: 10px !important;
     margin-top: 15px !important;
   }
-  .ui-paginator-icon
-  {
-    color: $veryLightSiteColor !important;
+  .ui-paginator-icon {
+    color: var(--veryLightSiteColor) !important;
   }
-  .ui-paginator-element:hover > .ui-paginator-icon:hover
-  {
-    color: $darkSiteColor !important;
+  .ui-paginator-element:hover > .ui-paginator-icon:hover {
+    color: var(--darkSiteColor) !important;
   }
-  .ui-paginator-element:hover
-  {
-    background-color: $ultraLightSiteColor !important;
+  .ui-paginator-element:hover {
+    background-color: var(--ultraLightSiteColor) !important;
   }
-  .ui-paginator-page
-  {
-    background-color: $darkSiteColor;
-    color: $veryLightSiteColor !important;
+  .ui-paginator-page {
+    background-color: var(--darkSiteColor);
+    color: var(--veryLightSiteColor) !important;
     font-weight: bold;
   }
-  .ui-button
-  {
-    background-color: $veryLightSiteColor !important;
-    border-color: $middleSiteColor !important;
+  .ui-button {
+    background-color: var(--veryLightSiteColor) !important;
+    border-color: var(--middleSiteColor) !important;
     -webkit-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
     border-radius: 0 !important;
   }
-  .ui-button:active
-  {
+  .ui-button:active {
     outline: none !important;
   }
-  .ui-button-icon-left
-  {
-    color: $middleSiteColor !important;
+  .ui-button-icon-left {
+    color: var(--middleSiteColor) !important;
   }
-  .ui-button.ui-state-active
-  {
-    background-color: $middleSiteColor !important;
+  .ui-button.ui-state-active {
+    background-color: var(--middleSiteColor) !important;
     border: none !important;
     outline: none !important;
-    .ui-button-icon-left
-    {
-      color: $veryLightSiteColor !important;
+    .ui-button-icon-left {
+      color: var(--veryLightSiteColor) !important;
     }
   }
-  a.ui-state-active
-  {
-    background-color: $middleSiteColor !important;
+  a.ui-state-active {
+    background-color: var(--middleSiteColor) !important;
   }
-  .ui-panel-titlebar
-  {
-    background-color: $middleSiteColor !important;
-    border-color: $middleSiteColor !important;
-    color: $veryLightSiteColor !important;
+  .ui-panel-titlebar {
+    background-color: var(--middleSiteColor) !important;
+    border-color: var(--middleSiteColor) !important;
+    color: var(--veryLightSiteColor) !important;
   }
-  .ui-panel-content
-  {
-    background-color: $veryLightSiteColor !important;
-    border-color: $middleSiteColor !important;
-    .hrBox
-    {
+  .ui-panel-content {
+    background-color: var(--veryLightSiteColor) !important;
+    border-color: var(--middleSiteColor) !important;
+    .hrBox {
       width: 100%;
       height: 1px;
-      background-color: $darkSiteColor;
+      background-color: var(--darkSiteColor);
       margin: 10px 0;
     }
   }
-  .ui-dialog
-  {
+  .ui-dialog {
     font-family: 'Montserrat Alternates', sans-serif;
   }
-  .ui-dialog-titlebar
-  {
-    background-color: $darkSiteColor !important;
-    color: $lightSiteColor !important;
-    border-color: $lightSiteColor !important;
+  .ui-dialog-titlebar {
+    background-color: var(--darkSiteColor) !important;
+    color: var(--lightSiteColor) !important;
+    border-color: var(--lightSiteColor) !important;
     cursor: move;
   }
-  .ui-dialog-title
-  {
+  .ui-dialog-title {
     cursor: default;
   }
-  .ui-dialog-titlebar-icon
-  {
-    color: $lightSiteColor !important;
+  .ui-dialog-titlebar-icon {
+    color: var(--lightSiteColor) !important;
   }
-  .ui-dialog-content
-  {
-    background-color: $darkSiteColor !important;
-    border-color: $lightSiteColor !important;
+  .ui-dialog-content {
+    background-color: var(--darkSiteColor) !important;
+    border-color: var(--lightSiteColor) !important;
   }
 }
-.record_title
-{
+.record_title {
   margin: 5px 0;
   font-size: 20px;
+  color: var(--darkSiteColor);
 }
-.record_value
-{
+.record_value {
   margin: 5px 0;
   font-size: 20px;
-  div
-  {
+  color: var(--darkSiteColor);
+  div {
     display: inline-block;
-    border-top: 1px solid $darkSiteColor;
-    border-right: 1px solid $darkSiteColor;
+    border-top: 1px solid var(--darkSiteColor);
+    border-right: 1px solid var(--darkSiteColor);
     padding: 10px;
   }
 }
-.record_type
-{
-  background-color: $darkSiteColor;
-  color: $lightSiteColor;
+.record_type {
+  background-color: var(--darkSiteColor);
+  color: var(--lightSiteColor);
   display: inline-block;
   padding: 10px;
   margin: 5px 0;
 }
-.record_value_grid
-{
-  background-color: $darkSiteColor;
-  color: $lightSiteColor;
+.record_value_grid {
+  background-color: var(--darkSiteColor);
+  color: var(--lightSiteColor);
   padding: 10px;
   margin: 10px 0;
 }
-.addBtn
-{
+.addBtn {
   margin: 5px auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $darkSiteColor;
-  color: $veryLightSiteColor;
+  background-color: var(--darkSiteColor);
+  color: var(--veryLightSiteColor);
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 24px;
   border: 1px solid transparent;
-  -webkit-transition: all ease-in-out .25s;
-  -moz-transition: all ease-in-out .25s;
-  -ms-transition: all ease-in-out .25s;
-  -o-transition: all ease-in-out .25s;
-  transition: all ease-in-out .25s;
+  -webkit-transition: all ease-in-out 0.25s;
+  -moz-transition: all ease-in-out 0.25s;
+  -ms-transition: all ease-in-out 0.25s;
+  -o-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   cursor: pointer;
-  fa-icon
-  {
+  fa-icon {
     font-size: 32px;
     margin-right: 20px;
   }
 }
 .editBtn,
-.deleteBtn
-{
+.deleteBtn {
   width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $darkSiteColor;
-  color: $lightSiteColor;
+  background-color: var(--darkSiteColor);
+  color: var(--lightSiteColor);
   font-size: 32px;
   border: 1px solid transparent;
-  -webkit-transition: all ease-in-out .25s;
-  -moz-transition: all ease-in-out .25s;
-  -ms-transition: all ease-in-out .25s;
-  -o-transition: all ease-in-out .25s;
-  transition: all ease-in-out .25s;
+  -webkit-transition: all ease-in-out 0.25s;
+  -moz-transition: all ease-in-out 0.25s;
+  -ms-transition: all ease-in-out 0.25s;
+  -o-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
   cursor: pointer;
 }
 .addBtn:hover,
 .editBtn:hover,
-.deleteBtn:hover
-{
-  background-color: $veryLightSiteColor;
-  color: $darkSiteColor;
-  border-color: $darkSiteColor;
+.deleteBtn:hover {
+  background-color: var(--veryLightSiteColor);
+  color: var(--darkSiteColor);
+  border-color: var(--darkSiteColor);
 }
-.question-form
-{
+.question-form {
   padding: 20px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  background-color: $ultraLightSiteColor;
-  border: 3px solid $darkSiteColor;
+  background-color: var(--ultraLightSiteColor);
+  border: 3px solid var(--darkSiteColor);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -319,81 +265,70 @@ $whiteSiteColor: #ffffff;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: $darkSiteColor;
-  .question-form-title
-  {
+  color: var(--darkSiteColor);
+  .question-form-title {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 32px;
     text-align: center;
   }
-  .question-line
-  {
+  .question-line {
     width: 50%;
     height: 3px;
-    background-color: $blackSiteColor;
+    background-color: var(--darkSiteColor);
     margin: 25px 0;
   }
-  .alert-icon
-  {
+  .alert-icon {
     font-size: 64px;
     margin-bottom: 15px;
   }
-  .question-form-subtitle
-  {
+  .question-form-subtitle {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 20px;
     text-align: center;
     margin-bottom: 20px;
   }
-  form
-  {
+  form {
     width: 100%;
     text-align: center;
-    span.ui-float-label
-    {
+    span.ui-float-label {
       margin-top: 20px;
       display: flex;
       flex-flow: row-reverse nowrap;
-      label
-      {
+      label {
         font-family: 'Montserrat Alternates', sans-serif;
-        color: $middleSiteColor;
+        color: var(--middleSiteColor);
         margin-left: 50px;
       }
-      input
-      {
+      input {
         width: calc(100% - 45px);
         height: 45px;
         background-color: transparent;
-        border-color: $darkSiteColor;
+        border-color: var(--darkSiteColor);
         font-family: 'Montserrat Alternates', sans-serif;
-        color: $darkSiteColor;
+        color: var(--darkSiteColor);
         font-size: 16px;
         -webkit-border-radius: 0 3px 3px 0;
         -moz-border-radius: 0 3px 3px 0;
         border-radius: 0 3px 3px 0;
       }
       .ui-inputtext,
-      .ui-dropdown
-      {
-        -webkit-transition: all ease-in-out .25s;
-        -moz-transition: all ease-in-out .25s;
-        -ms-transition: all ease-in-out .25s;
-        -o-transition: all ease-in-out .25s;
-        transition: all ease-in-out .25s;
+      .ui-dropdown {
+        -webkit-transition: all ease-in-out 0.25s;
+        -moz-transition: all ease-in-out 0.25s;
+        -ms-transition: all ease-in-out 0.25s;
+        -o-transition: all ease-in-out 0.25s;
+        transition: all ease-in-out 0.25s;
       }
       .ui-inputtext:focus,
-      .ui-dropdown:focus
-      {
-        background-color: $ultraLightSiteColor !important;
+      .ui-dropdown:focus {
+        background-color: var(--ultraLightSiteColor) !important;
       }
-      textarea
-      {
+      textarea {
         width: calc(100% - 45px);
         background-color: transparent;
-        border-color: $darkSiteColor;
+        border-color: var(--darkSiteColor);
         font-family: 'Montserrat Alternates', sans-serif;
-        color: $darkSiteColor;
+        color: var(--darkSiteColor);
         font-size: 16px;
         resize: vertical;
         height: 250px;
@@ -401,196 +336,167 @@ $whiteSiteColor: #ffffff;
         -webkit-border-radius: 0 3px 3px 0;
         -moz-border-radius: 0 3px 3px 0;
         border-radius: 0 3px 3px 0;
-        textarea:focus
-        {
-          background-color: $ultraLightSiteColor !important;
+        textarea:focus {
+          background-color: var(--ultraLightSiteColor) !important;
         }
       }
-      fa-icon
-      {
+      fa-icon {
         width: 45px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid $darkSiteColor;
+        border: 1px solid var(--darkSiteColor);
         border-right: none;
-        background-color: $darkSiteColor;
-        color: $ultraLightSiteColor;
+        background-color: var(--darkSiteColor);
+        color: var(--ultraLightSiteColor);
         -webkit-border-radius: 3px 0 0 3px;
         -moz-border-radius: 3px 0 0 3px;
         border-radius: 3px 0 0 3px;
         font-size: 18px;
       }
-      input:focus ~ fa-icon
-      {
+      input:focus ~ fa-icon {
         background-color: transparent;
-        color: $darkSiteColor;
+        color: var(--darkSiteColor);
       }
-      textarea:focus ~ fa-icon
-      {
+      textarea:focus ~ fa-icon {
         background-color: transparent;
-        color: $darkSiteColor;
+        color: var(--darkSiteColor);
       }
     }
-    .form-alert
-    {
-      div
-      {
+    .form-alert {
+      div {
         font-family: 'Montserrat Alternates', sans-serif;
         font-size: 18px;
-        color: $darkSiteColor;
+        color: var(--darkSiteColor);
         margin-top: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        fa-icon
-        {
+        fa-icon {
           margin-right: 10px;
           font-size: 28px;
         }
       }
     }
-    button
-    {
+    button {
       margin: 25px 5px 10px 5px;
       width: calc(50% - 10px);
-      background-color: $darkSiteColor;
-      border-color: $darkSiteColor;
+      background-color: var(--darkSiteColor);
+      border-color: var(--darkSiteColor);
       font-family: 'Montserrat Alternates', sans-serif;
-      color: $ultraLightSiteColor;
+      color: var(--ultraLightSiteColor);
       font-size: 15px;
     }
-    button:focus
-    {
+    button:focus {
       outline: none !important;
       border: none !important;
     }
-    button:disabled
-    {
+    button:disabled {
       cursor: not-allowed;
     }
   }
 }
-.deleteDialogBox
-{
+.deleteDialogBox {
   padding: 25px;
 }
-h3, h1
-{
-  color: $lightSiteColor;
+h3,
+h1 {
+  color: var(--lightSiteColor);
   text-align: center;
 }
-.deletion-icon
-{
+.deletion-icon {
   text-align: center;
   font-size: 36px;
-  color: $lightSiteColor;
+  color: var(--lightSiteColor);
 }
-.selectedDeletion
-{
+.selectedDeletion {
   font-size: 32px;
   text-decoration: underline;
   text-decoration-style: dotted;
-  color: $ultraLightSiteColor;
+  color: var(--ultraLightSiteColor);
 }
-.btn-container
-{
+.btn-container {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
 }
-.item-btn-container
-{
+.item-btn-container {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
-  div
-  {
+  div {
     margin-left: 10px;
   }
 }
-.item-btn-container-table
-{
+.item-btn-container-table {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
 }
 .delBtn,
-.cancelBtn
-{
-  background-color: $lightSiteColor;
-  color: $darkSiteColor;
+.cancelBtn {
+  background-color: var(--lightSiteColor);
+  color: var(--darkSiteColor);
   width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 32px;
-  border: 1px solid $lightSiteColor;
+  border: 1px solid var(--lightSiteColor);
   cursor: pointer;
 }
 .delBtn:hover,
-.cancelBtn:hover
-{
-  background-color: $darkSiteColor;
-  color: $lightSiteColor;
-  border: 1px solid $lightSiteColor;
+.cancelBtn:hover {
+  background-color: var(--darkSiteColor);
+  color: var(--lightSiteColor);
+  border: 1px solid var(--lightSiteColor);
 }
 :host ::ng-deep .custom-toast .ui-toast-message-success {
-  color: $darkSiteColor !important;
-  background-color: $lightSiteColor !important;
-  border: 2px solid $darkSiteColor !important;
+  color: var(--darkSiteColor) !important;
+  background-color: var(--lightSiteColor) !important;
+  border: 2px solid var(--darkSiteColor) !important;
   font-family: 'Montserrat Alternates', sans-serif;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-error {
-  color: $lightSiteColor !important;
-  background-color: $darkSiteColor !important;
-  border: 2px solid $lightSiteColor !important;
+  color: var(--lightSiteColor) !important;
+  background-color: var(--darkSiteColor) !important;
+  border: 2px solid var(--lightSiteColor) !important;
   font-family: 'Montserrat Alternates', sans-serif;
 }
-:host ::ng-deep .custom-toast .ui-toast-summary
-{
+:host ::ng-deep .custom-toast .ui-toast-summary {
   font-size: 20px !important;
 }
-:host ::ng-deep .custom-toast .ui-toast-detail
-{
+:host ::ng-deep .custom-toast .ui-toast-detail {
   text-decoration-style: dotted !important;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-success .ui-toast-close-icon {
-  color: $darkSiteColor !important;
+  color: var(--darkSiteColor) !important;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-error .ui-toast-close-icon {
-  color: $lightSiteColor !important;
+  color: var(--lightSiteColor) !important;
 }
-.one-item
-{
-  border-bottom: 1px solid $darkSiteColor;
+.one-item {
+  border-bottom: 1px solid var(--darkSiteColor);
 }
-@media screen and (max-width: 500px)
-{
-  .addBtn
-  {
+@media screen and (max-width: 500px) {
+  .addBtn {
     font-size: 18px;
-    fa-icon
-    {
+    fa-icon {
       font-size: 28px;
     }
   }
 }
-@media screen and (max-width: 400px)
-{
-  .record_title
-  {
+@media screen and (max-width: 400px) {
+  .record_title {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 375px)
-{
-  .addBtn
-  {
+@media screen and (max-width: 375px) {
+  .addBtn {
     font-size: 16px;
   }
 }

@@ -1,11 +1,3 @@
-$darkSiteColor: #403121;
-$lightSiteColor: #ed9728;
-$veryLightSiteColor: #ffbc49;
-$ultraLightSiteColor: #ffffbf;
-$middleSiteColor: #a65e09;
-$blackSiteColor: #000000;
-$whiteSiteColor: #ffffff;
-
 .transitionStyle {
   -webkit-transition: all ease-in-out 0.25s;
   -moz-transition: all ease-in-out 0.25s;
@@ -14,15 +6,15 @@ $whiteSiteColor: #ffffff;
   transition: all ease-in-out 0.25s;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-success {
-  color: $darkSiteColor !important;
-  background-color: $lightSiteColor !important;
-  border: 2px solid $darkSiteColor !important;
+  color: var(--darkSiteColor) !important;
+  background-color: var(--lightSiteColor) !important;
+  border: 2px solid var(--darkSiteColor) !important;
   font-family: 'Montserrat Alternates', sans-serif;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-error {
-  color: $lightSiteColor !important;
-  background-color: $darkSiteColor !important;
-  border: 2px solid $lightSiteColor !important;
+  color: var(--lightSiteColor) !important;
+  background-color: var(--darkSiteColor) !important;
+  border: 2px solid var(--lightSiteColor) !important;
   font-family: 'Montserrat Alternates', sans-serif;
 }
 :host ::ng-deep .custom-toast .ui-toast-summary {
@@ -32,10 +24,10 @@ $whiteSiteColor: #ffffff;
   text-decoration-style: dotted !important;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-success .ui-toast-close-icon {
-  color: $darkSiteColor !important;
+  color: var(--darkSiteColor) !important;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-error .ui-toast-close-icon {
-  color: $lightSiteColor !important;
+  color: var(--lightSiteColor) !important;
 }
 .progressSpinnerBox {
   width: 100%;
@@ -52,47 +44,20 @@ $whiteSiteColor: #ffffff;
     border-radius: 0 !important;
   }
   .progressBarStyle .ui-progressbar .ui-progressbar-label {
-    color: $darkSiteColor !important;
+    color: var(--darkSiteColor) !important;
   }
   .progressBarStyle .ui-progressbar .ui-progressbar-value {
-    background: $darkSiteColor !important;
+    background: var(--darkSiteColor) !important;
   }
 }
 .home-title {
-  font-family: 'Montserrat Alternates', sans-serif;
-  color: $darkSiteColor;
+  font-weight: 600;
+  color: var(--darkSiteColor);
   font-size: 32px;
   width: calc(100% - 6px);
   text-align: center;
-  background: rgb(255, 255, 191);
-  background: -moz-linear-gradient(
-    left,
-    rgba(255, 255, 191, 0) 0%,
-    rgba(255, 255, 191, 1) 15%,
-    rgba(255, 188, 73, 1) 49%,
-    rgba(255, 188, 73, 1) 51%,
-    rgba(255, 255, 191, 1) 85%,
-    rgba(255, 255, 191, 0) 100%
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgba(255, 255, 191, 0) 0%,
-    rgba(255, 255, 191, 1) 15%,
-    rgba(255, 188, 73, 1) 49%,
-    rgba(255, 188, 73, 1) 51%,
-    rgba(255, 255, 191, 1) 85%,
-    rgba(255, 255, 191, 0) 100%
-  );
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 191, 0) 0%,
-    rgba(255, 255, 191, 1) 15%,
-    rgba(255, 188, 73, 1) 49%,
-    rgba(255, 188, 73, 1) 51%,
-    rgba(255, 255, 191, 1) 85%,
-    rgba(255, 255, 191, 0) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffbf', endColorstr='#ffffbf',GradientType=1 );
+  background: var(--ultraLightSiteColor);
+  background: var(--title-bg);
   margin: 20px 0 20px 0;
   padding: 20px 10px;
   -webkit-user-select: none;
@@ -106,8 +71,8 @@ $whiteSiteColor: #ffffff;
   margin: 0 auto;
 }
 .about-company {
-  font-family: 'Montserrat Alternates', sans-serif;
-  color: $darkSiteColor;
+  font-weight: 500;
+  color: var(--darkSiteColor);
   font-size: 24px;
   line-height: 50px;
   text-align: center;
@@ -118,8 +83,8 @@ $whiteSiteColor: #ffffff;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 188, 73, 0.8);
-  border: 3px solid $darkSiteColor;
+  background-color: rgba(var(--veryLightSiteColor-rgb), 0.8);
+  border: 3px solid var(--darkSiteColor);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -129,6 +94,7 @@ $whiteSiteColor: #ffffff;
   user-select: none;
   img {
     margin-bottom: 15px;
+    filter: var(--logo-img);
   }
 }
 .home-info-item {
@@ -136,7 +102,7 @@ $whiteSiteColor: #ffffff;
   display: flex;
   flex-flow: row wrap;
   margin-bottom: 20px;
-  border: 3px solid $darkSiteColor;
+  border: 3px solid var(--darkSiteColor);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -147,8 +113,8 @@ $whiteSiteColor: #ffffff;
   .home-info-icon {
     width: 200px;
     height: 200px;
-    background-color: rgba(64, 49, 33, 1);
-    color: $lightSiteColor;
+    background-color: rgba(var(--darkSiteColor-rgb), 1);
+    color: var(--lightSiteColor);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,27 +122,28 @@ $whiteSiteColor: #ffffff;
   }
   .home-info-text {
     width: calc(100% - 200px);
-    background-color: rgba(255, 188, 73, 0.8);
-    border-bottom: 3px solid $darkSiteColor;
-    color: $darkSiteColor;
+    background-color: rgba(var(--veryLightSiteColor-rgb), 0.8);
+    border-bottom: 3px solid var(--darkSiteColor);
+    color: var(--darkSiteColor);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 600;
     font-size: 48px;
     padding: 20px;
   }
   .home-info-value {
-    background-color: rgba(255, 188, 73, 0.8);
+    background-color: rgba(var(--veryLightSiteColor-rgb), 0.8);
     height: 200px;
     display: flex;
     flex-basis: 100%;
     align-items: center;
     justify-content: center;
     font-size: 100px;
-    font-family: 'Montserrat Alternates', sans-serif;
-    color: $darkSiteColor;
+
+    font-weight: 700;
+    color: var(--darkSiteColor);
   }
 }
 @media screen and (max-width: 1450px) {
@@ -331,5 +298,11 @@ $whiteSiteColor: #ffffff;
     .home-info-value {
       font-size: 40px;
     }
+  }
+}
+
+.elevators-icon {
+  path {
+    fill: var(--lightSiteColor);
   }
 }
