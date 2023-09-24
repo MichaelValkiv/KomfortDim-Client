@@ -28,6 +28,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@nicky-lenaers/ngx-scroll-to": "^3.0.1",
     "animated-scroll-to": "^2.0.5",
+    "firebase": "^10.4.0",
     "hammerjs": "^2.0.8",
     "ngx-quill": "^7.3.12",
     "primeicons": "^2.0.0",
