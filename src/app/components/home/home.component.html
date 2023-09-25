@@ -16,7 +16,7 @@
 
 <div class="home-container transitionStyle">
   <div class="about-company transitionStyle">
-    <img src="assets/images/logo_transparent.png" height="100" />
+    <img src="assets/images/logo_transparent.png" height="70" />
     УК “Комфорт-Дім” – це компанія, що надає послуги з управління
     багатоквартирним будинком згідно з діючим законодавством. Наші клієнти
     співвласники житлових та нежитлових приміщень. Наша компанія забезпечує
@@ -26,11 +26,11 @@
     до норм, стандартів, правил та Ваших побажань.
   </div>
 
-  <div
-    class="characteristic-items"
-    *ngFor="let companyCharacteristic of companyCharacteristics"
-  >
-    <div class="home-info-item transitionStyle">
+  <div class="characteristic-items">
+    <div
+      class="home-info-item transitionStyle"
+      *ngFor="let companyCharacteristic of companyCharacteristics"
+    >
       <div class="home-info-icon transitionStyle">
         <fa-icon
           [icon]="faHome"

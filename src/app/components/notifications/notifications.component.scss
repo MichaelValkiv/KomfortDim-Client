@@ -217,7 +217,7 @@
   display: flex;
   flex-flow: row wrap;
   margin: 10px 0;
-  border: 3px solid var(--darkSiteColor);
+  border: 2px solid var(--lightSiteColor);
   color: var(--darkSiteColor);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -225,15 +225,15 @@
   .notifications-icon {
     width: 100px;
     font-size: 50px;
-    background-color: var(--darkSiteColor);
-    color: var(--lightSiteColor);
+    background-color: var(--veryLightSiteColor);
+    color: var(--darkSiteColor);
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .notifications-text {
     width: calc(100% - 100px);
-    background-color: rgba(var(--veryLightSiteColor-rgb), 0.8);
+    background-color: var(--veryLightSiteColor);
     padding: 5px 20px;
     font-weight: 500;
     font-size: 18px;
@@ -242,22 +242,18 @@
       position: absolute;
       top: 0;
       right: 0;
-      background-color: var(--darkSiteColor);
-      color: var(--veryLightSiteColor);
+      background-color: var(--lightSiteColor);
+      color: var(--darkSiteColor);
       padding: 2px 5px 5px 5px;
-      -webkit-border-radius: 0 0 0 5px;
-      -moz-border-radius: 0 0 0 5px;
       border-radius: 0 0 0 5px;
     }
     .notification-date {
       position: absolute;
       bottom: 0;
       right: 0;
-      background-color: var(--darkSiteColor);
-      color: var(--veryLightSiteColor);
+      background-color: var(--lightSiteColor);
+      color: var(--darkSiteColor);
       padding: 5px 5px 2px 5px;
-      -webkit-border-radius: 5px 0 0 0;
-      -moz-border-radius: 5px 0 0 0;
       border-radius: 5px 0 0 0;
     }
     .notification-record {
@@ -283,10 +279,6 @@
         font-size: 20px;
         margin: 5px;
         border: 1px solid transparent;
-        -webkit-transition: all ease-in-out 0.25s;
-        -moz-transition: all ease-in-out 0.25s;
-        -ms-transition: all ease-in-out 0.25s;
-        -o-transition: all ease-in-out 0.25s;
         transition: all ease-in-out 0.25s;
         cursor: pointer;
       }

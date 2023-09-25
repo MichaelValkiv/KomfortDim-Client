@@ -9,7 +9,7 @@ import {
   providedIn: 'root',
 })
 export class HttpUrlInterceptorService implements HttpInterceptor {
-  // baseUrl = 'https://komfortdim-php.000webhostapp.com';
+  // baseUrl = 'https://komfortdim-php.infinityfreeapp.com';
   baseUrl = 'https://komfortdimphp.herokuapp.com';
   // baseUrl = 'https://komfortdim-server.onrender.com';
 

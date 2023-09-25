@@ -102,11 +102,12 @@
   .ui-paginator-icon {
     color: var(--veryLightSiteColor) !important;
   }
-  .ui-paginator-element:hover > .ui-paginator-icon:hover {
+  .ui-paginator-element:hover > .ui-paginator-icon {
     color: var(--darkSiteColor) !important;
   }
   .ui-paginator-element:hover {
     background-color: var(--ultraLightSiteColor) !important;
+    color: var(--darkSiteColor) !important;
   }
   .ui-paginator-page {
     background-color: var(--darkSiteColor);
