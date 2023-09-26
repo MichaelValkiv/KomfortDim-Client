@@ -15,7 +15,7 @@ jobs:
       - name: npm dependencies
         run: npm install
       - name: build
-        run: npm run build
+        run: ng build --configuration=production
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
