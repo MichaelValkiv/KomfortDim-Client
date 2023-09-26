@@ -40,3 +40,8 @@ mat-nav-list {
     }
   }
 }
+
+.active-side-nav {
+  background-color: var(--darkSiteColor) !important;
+  color: var(--lightSiteColor) !important;
+}

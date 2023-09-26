@@ -38,10 +38,9 @@
   justify-content: center;
 }
 .login-container {
-  background-color: rgba(var(--veryLightSiteColor-rgb), 0.8);
-  border: 3px solid var(--darkSiteColor);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
+  background-color: var(--veryLightSiteColor);
+  border: 2px solid var(--lightSiteColor);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
   border-radius: 5px;
   padding: 50px 20px;
   display: flex;

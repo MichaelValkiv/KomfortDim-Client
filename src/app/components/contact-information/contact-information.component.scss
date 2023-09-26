@@ -67,9 +67,6 @@
   background: var(--title-bg);
   margin: 20px 0 20px 0;
   padding: 20px 10px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 .contact-info-item {
@@ -79,8 +76,6 @@
   margin-bottom: 30px;
   border: 2px solid var(--lightSiteColor);
   background-color: var(--veryLightSiteColor);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
   user-select: none;
