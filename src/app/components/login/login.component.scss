@@ -23,10 +23,6 @@
   color: var(--lightSiteColor) !important;
 }
 .transitionStyle {
-  -webkit-transition: all ease-in-out 0.25s;
-  -moz-transition: all ease-in-out 0.25s;
-  -ms-transition: all ease-in-out 0.25s;
-  -o-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
 }
 .loginBox {
@@ -83,8 +79,6 @@
         justify-content: center;
         background-color: var(--darkSiteColor);
         color: var(--lightSiteColor);
-        -webkit-border-radius: 3px 0 0 3px;
-        -moz-border-radius: 3px 0 0 3px;
         border-radius: 3px 0 0 3px;
         font-size: 18px;
       }
@@ -96,8 +90,6 @@
         font-family: 'Montserrat Alternates', sans-serif;
         color: var(--darkSiteColor);
         font-size: 16px;
-        -webkit-border-radius: 0 3px 3px 0;
-        -moz-border-radius: 0 3px 3px 0;
         border-radius: 0 3px 3px 0;
       }
       input:focus ~ fa-icon {
@@ -119,8 +111,6 @@
       cursor: not-allowed;
     }
     button:focus {
-      -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 1);
-      -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 1);
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 1);
     }
   }
@@ -131,8 +121,6 @@
   }
   .login-container {
     width: 100%;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
     border-radius: 0;
     border-left: none;
     border-right: none;

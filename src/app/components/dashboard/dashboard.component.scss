@@ -1,8 +1,4 @@
 .transitionStyle {
-  -webkit-transition: all ease-in-out 0.25s;
-  -moz-transition: all ease-in-out 0.25s;
-  -ms-transition: all ease-in-out 0.25s;
-  -o-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
 }
 .dashboard-container {
@@ -24,8 +20,6 @@
   }
   .ui-tabview-nav > li {
     border-color: var(--darkSiteColor) !important;
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
     border-radius: 0 !important;
   }
   .ui-tabview-nav > li:active {
@@ -117,8 +111,6 @@
   .ui-button {
     background-color: var(--veryLightSiteColor) !important;
     border-color: var(--middleSiteColor) !important;
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
     border-radius: 0 !important;
   }
   .ui-button:active {
@@ -212,13 +204,7 @@
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 24px;
   border: 1px solid transparent;
-  -webkit-transition: all ease-in-out 0.25s;
-  -moz-transition: all ease-in-out 0.25s;
-  -ms-transition: all ease-in-out 0.25s;
-  -o-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   cursor: pointer;
   fa-icon {
@@ -237,10 +223,6 @@
   color: var(--lightSiteColor);
   font-size: 32px;
   border: 1px solid transparent;
-  -webkit-transition: all ease-in-out 0.25s;
-  -moz-transition: all ease-in-out 0.25s;
-  -ms-transition: all ease-in-out 0.25s;
-  -o-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
   cursor: pointer;
 }
@@ -259,12 +241,7 @@
   justify-content: center;
   background-color: var(--ultraLightSiteColor);
   border: 3px solid var(--darkSiteColor);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   color: var(--darkSiteColor);
   .question-form-title {
@@ -308,16 +285,10 @@
         font-family: 'Montserrat Alternates', sans-serif;
         color: var(--darkSiteColor);
         font-size: 16px;
-        -webkit-border-radius: 0 3px 3px 0;
-        -moz-border-radius: 0 3px 3px 0;
         border-radius: 0 3px 3px 0;
       }
       .ui-inputtext,
       .ui-dropdown {
-        -webkit-transition: all ease-in-out 0.25s;
-        -moz-transition: all ease-in-out 0.25s;
-        -ms-transition: all ease-in-out 0.25s;
-        -o-transition: all ease-in-out 0.25s;
         transition: all ease-in-out 0.25s;
       }
       .ui-inputtext:focus,
@@ -334,8 +305,6 @@
         resize: vertical;
         height: 250px;
         min-height: 250px;
-        -webkit-border-radius: 0 3px 3px 0;
-        -moz-border-radius: 0 3px 3px 0;
         border-radius: 0 3px 3px 0;
         textarea:focus {
           background-color: var(--ultraLightSiteColor) !important;
@@ -350,8 +319,6 @@
         border-right: none;
         background-color: var(--darkSiteColor);
         color: var(--ultraLightSiteColor);
-        -webkit-border-radius: 3px 0 0 3px;
-        -moz-border-radius: 3px 0 0 3px;
         border-radius: 3px 0 0 3px;
         font-size: 18px;
       }

@@ -1,8 +1,4 @@
 .transitionStyle {
-  -webkit-transition: all ease-in-out 0.25s;
-  -moz-transition: all ease-in-out 0.25s;
-  -ms-transition: all ease-in-out 0.25s;
-  -o-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-success {
@@ -39,8 +35,6 @@
 :host ::ng-deep {
   .progressBarStyle .ui-progressbar {
     background-color: transparent !important;
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
     border-radius: 0 !important;
   }
 
@@ -62,9 +56,6 @@
   background: var(--title-bg);
   margin: 20px 0 10px 0;
   padding: 20px 10px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 .services-container {

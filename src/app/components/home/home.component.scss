@@ -1,8 +1,4 @@
 .transitionStyle {
-  -webkit-transition: all ease-in-out 0.25s;
-  -moz-transition: all ease-in-out 0.25s;
-  -ms-transition: all ease-in-out 0.25s;
-  -o-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-success {
@@ -39,8 +35,6 @@
 :host ::ng-deep {
   .progressBarStyle .ui-progressbar {
     background-color: transparent !important;
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
     border-radius: 0 !important;
   }
   .progressBarStyle .ui-progressbar .ui-progressbar-label {
@@ -60,9 +54,6 @@
   background: var(--title-bg);
   margin: 20px 0 20px 0;
   padding: 20px 10px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 .home-container {
@@ -104,8 +95,6 @@
   display: flex;
   flex-flow: row wrap;
   border: 2px solid var(--lightSiteColor);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px;
   background-color: var(--veryLightSiteColor);
   user-select: none;
@@ -164,8 +153,6 @@
 @media screen and (max-width: 1050px) {
   .about-company {
     width: 100%;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
     border-radius: 0;
     border-left: none;
     border-right: none;
@@ -180,8 +167,6 @@
     width: 100%;
     border-right: none;
     border-left: none;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
     border-radius: 0;
   }
 }

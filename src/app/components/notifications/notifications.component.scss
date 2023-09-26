@@ -1,8 +1,4 @@
 .transitionStyle {
-  -webkit-transition: all ease-in-out 0.25s;
-  -moz-transition: all ease-in-out 0.25s;
-  -ms-transition: all ease-in-out 0.25s;
-  -o-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
 }
 .progressSpinnerBox {
@@ -22,9 +18,6 @@
   background: var(--title-bg);
   margin: 20px 0 20px 0;
   padding: 20px 10px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 .showFormBtn {
@@ -57,8 +50,6 @@
 :host ::ng-deep {
   .progressBarStyle .ui-progressbar {
     background-color: transparent !important;
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
     border-radius: 0 !important;
   }
   .progressBarStyle .ui-progressbar .ui-progressbar-label {
@@ -139,8 +130,6 @@
         font-family: 'Montserrat Alternates', sans-serif;
         color: var(--darkSiteColor);
         font-size: 16px;
-        -webkit-border-radius: 0 3px 3px 0;
-        -moz-border-radius: 0 3px 3px 0;
         border-radius: 0 3px 3px 0;
       }
       textarea {
@@ -153,8 +142,6 @@
         resize: vertical;
         height: 250px;
         min-height: 250px;
-        -webkit-border-radius: 0 3px 3px 0;
-        -moz-border-radius: 0 3px 3px 0;
         border-radius: 0 3px 3px 0;
       }
       fa-icon {
@@ -166,8 +153,6 @@
         border-right: none;
         background-color: var(--darkSiteColor);
         color: var(--ultraLightSiteColor);
-        -webkit-border-radius: 3px 0 0 3px;
-        -moz-border-radius: 3px 0 0 3px;
         border-radius: 3px 0 0 3px;
         font-size: 18px;
       }
@@ -215,8 +200,6 @@
   margin: 10px 0;
   border: 2px solid var(--lightSiteColor);
   color: var(--darkSiteColor);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px;
   .notifications-icon {
     width: 100px;
@@ -373,8 +356,6 @@ h1 {
     width: 100%;
   }
   .notifications-item {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
     border-radius: 0;
     border-left: none;
     border-right: none;
