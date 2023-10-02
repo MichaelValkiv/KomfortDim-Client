@@ -2,28 +2,41 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Questions } from '../models/questions.model';
+import { map } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class QuestionsService {
+  constructor(private http: HttpClient) {}
 
-  constructor( private http: HttpClient ) { }
-
-  public getQuestionInfo(): Observable<Questions[]> {
-    return this.http.get<Questions[]>('/question_get.php');
+  public getQuestionInfo() {
+    return this.http.get('questions.json').pipe(
+      map((responseData) => {
+        const data = [];
+        for (const key in responseData) {
+          if (responseData.hasOwnProperty(key)) {
+            data.push({ ...responseData[key], id: key });
+          }
+        }
+        return data;
+      })
+    );
   }
 
-  public postQuestionInfo(newInfo: Questions): Observable<Questions> {
-    return this.http.post<Questions>('/question_post.php', newInfo);
+  public postQuestionInfo(newInfo: Questions) {
+    return this.http.post('questions.json', {
+      ...newInfo,
+      question_date: Date.now(),
+      answer_date: Date.now(),
+    });
   }
 
-  public putQuestionInfo(editedInfo: Questions): Observable<Questions> {
-    return this.http.put<Questions>('/question_put.php', editedInfo);
+  public putQuestionInfo(editedInfo: Questions) {
+    return this.http.put(`questions/${editedInfo.id}.json`, editedInfo);
   }
 
-  public deleteQuestionInfo(deletedInfo: Questions): Observable<Questions> {
-    return this.http.get<Questions>(`/question_delete.php/?id=${deletedInfo.id}`);
+  public deleteQuestionInfo(deletedInfo: Questions) {
+    return this.http.delete(`questions/${deletedInfo.id}.json`);
   }
-
 }

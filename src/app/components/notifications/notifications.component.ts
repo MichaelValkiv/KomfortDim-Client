@@ -121,7 +121,9 @@ export class NotificationsComponent implements OnInit, OnDestroy {
       .getNotificationInfo()
       .subscribe(
         (data) => {
-          this.allNotifications = data;
+          this.allNotifications = data.sort(
+            (a, b) => b.notification_date - a.notification_date
+          );
           this.isDataLoading = false;
         },
         () => {
