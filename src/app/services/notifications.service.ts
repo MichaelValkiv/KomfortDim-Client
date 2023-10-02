@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Notifications } from '../models/notifications.model';
 import { map } from 'rxjs/operators';
@@ -25,17 +25,27 @@ export class NotificationsService {
   }
 
   public postNotificationInfo(newInfo: Notifications) {
-    return this.http.post('notifications.json', {
-      ...newInfo,
-      notification_date: Date.now(),
-    });
+    return this.http.post(
+      'notifications.json',
+      {
+        ...newInfo,
+        notification_date: Date.now(),
+      },
+      {
+        params: new HttpParams().set('auth', sessionStorage.getItem('token')),
+      }
+    );
   }
 
   public putNotificationInfo(editedInfo: Notifications) {
-    return this.http.put(`notifications/${editedInfo.id}.json`, editedInfo);
+    return this.http.put(`notifications/${editedInfo.id}.json`, editedInfo, {
+      params: new HttpParams().set('auth', sessionStorage.getItem('token')),
+    });
   }
 
   public deleteNotificationInfo(deletedInfo: Notifications) {
-    return this.http.delete(`/notifications/${deletedInfo.id}.json`);
+    return this.http.delete(`/notifications/${deletedInfo.id}.json`, {
+      params: new HttpParams().set('auth', sessionStorage.getItem('token')),
+    });
   }
 }
