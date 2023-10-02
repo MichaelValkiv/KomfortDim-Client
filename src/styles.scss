@@ -37,6 +37,17 @@ body {
 body {
   font-family: 'Montserrat Alternates', sans-serif;
 }
+body::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url('/assets/backgrounds/city-main-background.png')
+    url('/assets/backgrounds/city-main-background1.png')
+    url('/assets/backgrounds/city-main-background-dark.png')
+    url('/assets/backgrounds/city-main-background1-dark.png');
+}
 .ui-dialog {
   font-family: 'Montserrat Alternates', sans-serif !important;
 }
