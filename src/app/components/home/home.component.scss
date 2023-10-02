@@ -1,28 +1,16 @@
-$darkSiteColor: #403121;
-$lightSiteColor: #ed9728;
-$veryLightSiteColor: #ffbc49;
-$ultraLightSiteColor: #ffffbf;
-$middleSiteColor: #a65e09;
-$blackSiteColor: #000000;
-$whiteSiteColor: #ffffff;
-
 .transitionStyle {
-  -webkit-transition: all ease-in-out 0.25s;
-  -moz-transition: all ease-in-out 0.25s;
-  -ms-transition: all ease-in-out 0.25s;
-  -o-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-success {
-  color: $darkSiteColor !important;
-  background-color: $lightSiteColor !important;
-  border: 2px solid $darkSiteColor !important;
+  color: var(--darkSiteColor) !important;
+  background-color: var(--lightSiteColor) !important;
+  border: 2px solid var(--darkSiteColor) !important;
   font-family: 'Montserrat Alternates', sans-serif;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-error {
-  color: $lightSiteColor !important;
-  background-color: $darkSiteColor !important;
-  border: 2px solid $lightSiteColor !important;
+  color: var(--lightSiteColor) !important;
+  background-color: var(--darkSiteColor) !important;
+  border: 2px solid var(--lightSiteColor) !important;
   font-family: 'Montserrat Alternates', sans-serif;
 }
 :host ::ng-deep .custom-toast .ui-toast-summary {
@@ -32,10 +20,10 @@ $whiteSiteColor: #ffffff;
   text-decoration-style: dotted !important;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-success .ui-toast-close-icon {
-  color: $darkSiteColor !important;
+  color: var(--darkSiteColor) !important;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-error .ui-toast-close-icon {
-  color: $lightSiteColor !important;
+  color: var(--lightSiteColor) !important;
 }
 .progressSpinnerBox {
   width: 100%;
@@ -47,57 +35,25 @@ $whiteSiteColor: #ffffff;
 :host ::ng-deep {
   .progressBarStyle .ui-progressbar {
     background-color: transparent !important;
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
     border-radius: 0 !important;
   }
   .progressBarStyle .ui-progressbar .ui-progressbar-label {
-    color: $darkSiteColor !important;
+    color: var(--darkSiteColor) !important;
   }
   .progressBarStyle .ui-progressbar .ui-progressbar-value {
-    background: $darkSiteColor !important;
+    background: var(--darkSiteColor) !important;
   }
 }
 .home-title {
-  font-family: 'Montserrat Alternates', sans-serif;
-  color: $darkSiteColor;
+  font-weight: 600;
+  color: var(--darkSiteColor);
   font-size: 32px;
   width: calc(100% - 6px);
   text-align: center;
-  background: rgb(255, 255, 191);
-  background: -moz-linear-gradient(
-    left,
-    rgba(255, 255, 191, 0) 0%,
-    rgba(255, 255, 191, 1) 15%,
-    rgba(255, 188, 73, 1) 49%,
-    rgba(255, 188, 73, 1) 51%,
-    rgba(255, 255, 191, 1) 85%,
-    rgba(255, 255, 191, 0) 100%
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgba(255, 255, 191, 0) 0%,
-    rgba(255, 255, 191, 1) 15%,
-    rgba(255, 188, 73, 1) 49%,
-    rgba(255, 188, 73, 1) 51%,
-    rgba(255, 255, 191, 1) 85%,
-    rgba(255, 255, 191, 0) 100%
-  );
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 191, 0) 0%,
-    rgba(255, 255, 191, 1) 15%,
-    rgba(255, 188, 73, 1) 49%,
-    rgba(255, 188, 73, 1) 51%,
-    rgba(255, 255, 191, 1) 85%,
-    rgba(255, 255, 191, 0) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffbf', endColorstr='#ffffbf',GradientType=1 );
+  background: var(--ultraLightSiteColor);
+  background: var(--title-bg);
   margin: 20px 0 20px 0;
   padding: 20px 10px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 .home-container {
@@ -106,77 +62,76 @@ $whiteSiteColor: #ffffff;
   margin: 0 auto;
 }
 .about-company {
-  font-family: 'Montserrat Alternates', sans-serif;
-  color: $darkSiteColor;
-  font-size: 24px;
-  line-height: 50px;
+  font-weight: 500;
+  color: var(--darkSiteColor);
+  font-size: 22px;
+  line-height: 36px;
   text-align: center;
   width: 100%;
-  margin: 0 auto 20px;
+  margin: 0 auto 30px;
   padding: 25px 20px 20px 20px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 188, 73, 0.8);
-  border: 3px solid $darkSiteColor;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
+  background-color: var(--veryLightSiteColor);
+  border: 2px solid var(--lightSiteColor);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
   border-radius: 5px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   img {
     margin-bottom: 15px;
+    filter: var(--logo-img);
   }
 }
+
+.characteristic-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 .home-info-item {
-  width: 100%;
+  width: calc(33.333% - 30px);
   display: flex;
   flex-flow: row wrap;
-  margin-bottom: 20px;
-  border: 3px solid $darkSiteColor;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
+  border: 2px solid var(--lightSiteColor);
   border-radius: 5px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  background-color: var(--veryLightSiteColor);
   user-select: none;
+  margin: 10px 0 40px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
+
   .home-info-icon {
-    width: 200px;
-    height: 200px;
-    background-color: rgba(64, 49, 33, 1);
-    color: $lightSiteColor;
+    width: 100px;
+    color: var(--darkSiteColor);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 100px;
+    font-size: 64px;
+    margin: 0 auto;
+    padding: 30px 0 40px;
   }
   .home-info-text {
-    width: calc(100% - 200px);
-    background-color: rgba(255, 188, 73, 0.8);
-    border-bottom: 3px solid $darkSiteColor;
-    color: $darkSiteColor;
+    width: 100%;
+    color: var(--darkSiteColor);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 48px;
-    padding: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    padding: 0 20px;
   }
   .home-info-value {
-    background-color: rgba(255, 188, 73, 0.8);
-    height: 200px;
+    padding: 20px;
     display: flex;
     flex-basis: 100%;
     align-items: center;
     justify-content: center;
-    font-size: 100px;
-    font-family: 'Montserrat Alternates', sans-serif;
-    color: $darkSiteColor;
+    font-size: 72px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--darkSiteColor);
   }
 }
 @media screen and (max-width: 1450px) {
@@ -186,11 +141,6 @@ $whiteSiteColor: #ffffff;
   .home-container {
     width: 1200px;
   }
-  .home-info-item {
-    .home-info-text {
-      width: calc(100% - 200px);
-    }
-  }
 }
 @media screen and (max-width: 1250px) {
   .about-company {
@@ -199,17 +149,10 @@ $whiteSiteColor: #ffffff;
   .home-container {
     width: 1000px;
   }
-  .home-info-item {
-    .home-info-text {
-      width: calc(100% - 200px);
-    }
-  }
 }
 @media screen and (max-width: 1050px) {
   .about-company {
     width: 100%;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
     border-radius: 0;
     border-left: none;
     border-right: none;
@@ -224,32 +167,13 @@ $whiteSiteColor: #ffffff;
     width: 100%;
     border-right: none;
     border-left: none;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
     border-radius: 0;
-    .home-info-text {
-      width: calc(100% - 200px);
-    }
   }
 }
-@media screen and (max-width: 830px) {
-  .home-info-item {
-    .home-info-text {
-      font-size: 40px;
-    }
-  }
-}
+
 @media screen and (max-width: 650px) {
   .home-title {
     font-size: 32px;
-  }
-  .home-info-item {
-    .home-info-text {
-      font-size: 36px;
-    }
-    .home-info-value {
-      font-size: 75px;
-    }
   }
 }
 @media screen and (max-width: 600px) {
@@ -257,32 +181,7 @@ $whiteSiteColor: #ffffff;
     font-size: 20px;
   }
 }
-@media screen and (max-width: 570px) {
-  .home-info-item {
-    .home-info-icon {
-      width: 150px;
-      height: 150px;
-      font-size: 75px;
-    }
-    .home-info-text {
-      width: calc(100% - 150px);
-      font-size: 30px;
-    }
-    .home-info-value {
-      font-size: 75px;
-    }
-  }
-}
-@media screen and (max-width: 510px) {
-  .home-info-item {
-    .home-info-text {
-      font-size: 24px;
-    }
-    .home-info-value {
-      font-size: 75px;
-    }
-  }
-}
+
 @media screen and (max-width: 480px) {
   .home-info-item {
     .home-info-text {
@@ -294,22 +193,7 @@ $whiteSiteColor: #ffffff;
     }
   }
 }
-@media screen and (max-width: 410px) {
-  .home-info-item {
-    .home-info-icon {
-      width: 120px;
-      height: 120px;
-      font-size: 60px;
-    }
-    .home-info-text {
-      width: calc(100% - 120px);
-      font-size: 20px;
-    }
-    .home-info-value {
-      font-size: 44px;
-    }
-  }
-}
+
 @media screen and (max-width: 370px) {
   .about-company {
     font-size: 20px;
@@ -317,19 +201,9 @@ $whiteSiteColor: #ffffff;
     line-height: 30px;
   }
 }
-@media screen and (max-width: 340px) {
-  .home-info-item {
-    .home-info-icon {
-      width: 100px;
-      height: 100px;
-      font-size: 50px;
-    }
-    .home-info-text {
-      width: calc(100% - 100px);
-      font-size: 16px;
-    }
-    .home-info-value {
-      font-size: 40px;
-    }
+
+.elevators-icon {
+  path {
+    fill: var(--darkSiteColor);
   }
 }

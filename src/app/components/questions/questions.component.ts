@@ -128,7 +128,9 @@ export class QuestionsComponent implements OnInit, OnDestroy {
       .getQuestionInfo()
       .subscribe(
         (data) => {
-          this.allQuestions = data;
+          this.allQuestions = data.sort(
+            (a, b) => b.question_date - a.question_date
+          );
           this.isDataLoading = false;
         },
         () => {

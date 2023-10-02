@@ -8,17 +8,20 @@ import { map } from 'rxjs/operators';
 export class AuthenticationService {
   constructor(private http: HttpClient) {}
 
-  authenticate(username, password) {
+  authenticate(email: string, password: string) {
     return this.http
-      .post<any>('https://komfortdim.herokuapp.com/authenticate', {
-        username,
-        password,
-      })
+      .post<any>(
+        'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBYaC1Q9zUwKw4jU3wDGFX69XnjXdV9uTk',
+        {
+          email,
+          password,
+          returnSecureToken: true,
+        }
+      )
       .pipe(
         map((userData) => {
-          sessionStorage.setItem('username', username);
-          const tokenString = 'Bearer ' + userData.token;
-          sessionStorage.setItem('token', tokenString);
+          sessionStorage.setItem('username', email);
+          sessionStorage.setItem('token', userData.idToken);
           return userData;
         })
       );

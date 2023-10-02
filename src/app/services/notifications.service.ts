@@ -1,29 +1,51 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Notifications } from '../models/notifications.model';
+import { map } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NotificationsService {
+  constructor(private http: HttpClient) {}
 
-  constructor( private http: HttpClient ) { }
-
-  public getNotificationInfo(): Observable<Notifications[]> {
-    return this.http.get<Notifications[]>('/notification_get.php');
+  public getNotificationInfo() {
+    return this.http.get('notifications.json').pipe(
+      map((responseData) => {
+        const data = [];
+        for (const key in responseData) {
+          if (responseData.hasOwnProperty(key)) {
+            data.push({ ...responseData[key], id: key });
+          }
+        }
+        return data;
+      })
+    );
   }
 
-  public postNotificationInfo(newInfo: Notifications): Observable<Notifications> {
-    return this.http.post<Notifications>('/notification_post.php', newInfo);
+  public postNotificationInfo(newInfo: Notifications) {
+    return this.http.post(
+      'notifications.json',
+      {
+        ...newInfo,
+        notification_date: Date.now(),
+      },
+      {
+        params: new HttpParams().set('auth', sessionStorage.getItem('token')),
+      }
+    );
   }
 
-  public putNotificationInfo(editedInfo: Notifications): Observable<Notifications> {
-    return this.http.put<Notifications>('/notification_put.php', editedInfo);
+  public putNotificationInfo(editedInfo: Notifications) {
+    return this.http.put(`notifications/${editedInfo.id}.json`, editedInfo, {
+      params: new HttpParams().set('auth', sessionStorage.getItem('token')),
+    });
   }
 
-  public deleteNotificationInfo(deletedInfo: Notifications): Observable<Notifications> {
-    return this.http.get<Notifications>(`/notification_delete.php/?id=${deletedInfo.id}`);
+  public deleteNotificationInfo(deletedInfo: Notifications) {
+    return this.http.delete(`/notifications/${deletedInfo.id}.json`, {
+      params: new HttpParams().set('auth', sessionStorage.getItem('token')),
+    });
   }
-
 }

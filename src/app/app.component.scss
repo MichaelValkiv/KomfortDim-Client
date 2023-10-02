@@ -8,32 +8,26 @@ $whiteSiteColor: #ffffff;
 
 mat-sidenav-container,
 mat-sidenav-content,
-mat-sidenav
-{
+mat-sidenav {
   height: 100%;
 }
-mat-sidenav
-{
+mat-sidenav {
   width: 250px;
   height: 100vh;
   position: fixed;
   top: 0;
   background-color: $veryLightSiteColor;
 }
-main
-{
+main {
   margin-top: 84px;
 }
-mat-sidenav-content
-{
-  background-image: url('/assets/backgrounds/city-main-background1.png');
+mat-sidenav-content {
+  background-image: var(--bg-img1);
   background-size: auto 100vh;
   background-attachment: fixed;
 }
-@media screen and (max-width: 800px)
-{
-  mat-sidenav-content
-  {
-    background-image: url('/assets/backgrounds/city-main-background.png');
+@media screen and (max-width: 800px) {
+  mat-sidenav-content {
+    background-image: var(--bg-img);
   }
 }

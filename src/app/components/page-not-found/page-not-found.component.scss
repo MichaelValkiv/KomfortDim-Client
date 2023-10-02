@@ -1,0 +1,30 @@
+.not-found {
+  height: calc(100vh - 64px);
+  text-align: center;
+
+  .code {
+    width: 100%;
+    font-size: 200px;
+    font-weight: 600;
+    color: var(--darkSiteColor);
+  }
+
+  .text {
+    width: 100%;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--middleSiteColor);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .not-found {
+    .code {
+      font-size: 100px;
+    }
+
+    .text {
+      font-size: 22px;
+    }
+  }
+}

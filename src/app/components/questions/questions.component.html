@@ -28,7 +28,9 @@
         </div>
         <div class="question-text">
           <div class="question-author">{{ questionItem.question_author }}</div>
-          <div class="question-date">{{ questionItem.question_date }}</div>
+          <div class="question-date">
+            {{ questionItem.question_date | date : 'dd/MM/yyyy, HH:mm' }}
+          </div>
           <div
             class="question-record"
             [innerHtml]="questionItem.question | safeHtml"
@@ -60,7 +62,9 @@
         </div>
         <div class="answer-text">
           <div class="answer-author">Комфорт-Дім</div>
-          <div class="answer-date">{{ questionItem.answer_date }}</div>
+          <div class="answer-date">
+            {{ questionItem.answer_date | date : 'dd/MM/yyyy, HH:mm' }}
+          </div>
           <div
             class="answer-record"
             [innerHtml]="questionItem.answer | safeHtml"

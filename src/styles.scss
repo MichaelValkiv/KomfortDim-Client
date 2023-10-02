@@ -1,4 +1,4 @@
-
+@import 'src/app/styles/theme';
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
@@ -19,99 +19,86 @@ $newProjectDecember19-accent: mat-palette($mat-pink, A200, A100, A400);
 $newProjectDecember19-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$newProjectDecember19-theme: mat-light-theme($newProjectDecember19-primary, $newProjectDecember19-accent, $newProjectDecember19-warn);
+$newProjectDecember19-theme: mat-light-theme(
+  $newProjectDecember19-primary,
+  $newProjectDecember19-accent,
+  $newProjectDecember19-warn
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($newProjectDecember19-theme);
 
-/* You can add global styles to this file, and also import other style files */
-
-$darkSiteColor: #403121;
-$lightSiteColor: #ed9728;
-$veryLightSiteColor: #ffbc49;
-$ultraLightSiteColor: #ffffbf;
-$middleSiteColor: #a65e09;
-$blackSiteColor: #000000;
-$whiteSiteColor: #ffffff;
-
 html,
-body
-{
-  //height: 100%;
+body {
   margin: 0;
 }
-body
-{
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  //background-image: url('/assets/backgrounds/light-tile.gif');
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
 }
-.ui-dialog
-{
+body::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url('/assets/backgrounds/city-main-background.png')
+    url('/assets/backgrounds/city-main-background1.png')
+    url('/assets/backgrounds/city-main-background-dark.png')
+    url('/assets/backgrounds/city-main-background1-dark.png');
+}
+.ui-dialog {
   font-family: 'Montserrat Alternates', sans-serif !important;
 }
-.ui-dialog-titlebar
-{
-  background-color: $darkSiteColor !important;
-  color: $lightSiteColor !important;
-  border-color: $lightSiteColor !important;
+.ui-dialog-titlebar {
+  background-color: var(--darkSiteColor) !important;
+  color: var(--lightSiteColor) !important;
+  border-color: var(--lightSiteColor) !important;
   cursor: move;
 }
-.ui-dialog-title
-{
+.ui-dialog-title {
   cursor: default;
 }
-.ui-dialog-titlebar-icon
-{
-  color: $lightSiteColor !important;
+.ui-dialog-titlebar-icon {
+  color: var(--lightSiteColor) !important;
 }
-.ui-dialog-content
-{
-  background-color: $darkSiteColor !important;
-  border-color: $lightSiteColor !important;
+.ui-dialog-content {
+  background-color: var(--darkSiteColor) !important;
+  border-color: var(--lightSiteColor) !important;
 }
 .ui-inputtext,
-.ui-dropdown
-{
+.ui-dropdown {
   font-family: 'Montserrat Alternates', sans-serif;
-  background-color: $veryLightSiteColor !important;
-  border-color: $middleSiteColor !important;
-  color: $darkSiteColor !important;
+  background-color: var(--veryLightSiteColor) !important;
+  border-color: var(--middleSiteColor) !important;
+  color: var(--darkSiteColor) !important;
 }
-.contactDropdown > .ui-dropdown
-{
+.contactDropdown > .ui-dropdown {
   padding: 7px 10px 7px 0;
   margin-top: 20px;
   width: 100% !important;
-  //height: 45px;
 }
-//.ui-inputtext.searchInput
-//{
-//  height: 45px;
-//}
-li.ui-state-highlight > span
-{
-  color: $middleSiteColor;
+
+li.ui-state-highlight > span {
+  color: var(--middleSiteColor);
 }
-.ui-dropdown-trigger
-{
-  background-color: $middleSiteColor !important;
+.ui-dropdown-trigger {
+  background-color: var(--middleSiteColor) !important;
 }
-.ui-dropdown-panel
-{
-  border-color: $middleSiteColor !important;
+.ui-dropdown-panel {
+  border-color: var(--middleSiteColor) !important;
 }
-.ui-dropdown-item
-{
-  background-color: $veryLightSiteColor !important;
+.ui-dropdown-item {
+  background-color: var(--veryLightSiteColor) !important;
   font-family: 'Montserrat Alternates', sans-serif;
 }
-.ui-dropdown-item:hover
-{
-  background-color: $lightSiteColor !important;
+.ui-dropdown-item:hover {
+  background-color: var(--lightSiteColor) !important;
 }
-.ui-dropdown-trigger-icon
-{
-  color: $veryLightSiteColor !important;
+.ui-dropdown-trigger-icon {
+  color: var(--veryLightSiteColor) !important;
+}
+.ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item {
+  color: var(--darkSiteColor) !important;
 }

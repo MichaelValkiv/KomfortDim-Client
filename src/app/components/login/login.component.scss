@@ -1,20 +1,13 @@
-$darkSiteColor: #403121;
-$lightSiteColor: #ed9728;
-$veryLightSiteColor: #ffbc49;
-$ultraLightSiteColor: #ffffbf;
-$middleSiteColor: #a65e09;
-$blackSiteColor: #000000;
-$whiteSiteColor: #ffffff;
 :host ::ng-deep .custom-toast .ui-toast-message-success {
-  color: $darkSiteColor !important;
-  background-color: $lightSiteColor !important;
-  border: 2px solid $darkSiteColor !important;
+  color: var(--darkSiteColor) !important;
+  background-color: var(--lightSiteColor) !important;
+  border: 2px solid var(--darkSiteColor) !important;
   font-family: 'Montserrat Alternates', sans-serif;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-error {
-  color: $lightSiteColor !important;
-  background-color: $darkSiteColor !important;
-  border: 2px solid $lightSiteColor !important;
+  color: var(--lightSiteColor) !important;
+  background-color: var(--darkSiteColor) !important;
+  border: 2px solid var(--lightSiteColor) !important;
   font-family: 'Montserrat Alternates', sans-serif;
 }
 :host ::ng-deep .custom-toast .ui-toast-summary {
@@ -24,16 +17,12 @@ $whiteSiteColor: #ffffff;
   text-decoration-style: dotted !important;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-success .ui-toast-close-icon {
-  color: $darkSiteColor !important;
+  color: var(--darkSiteColor) !important;
 }
 :host ::ng-deep .custom-toast .ui-toast-message-error .ui-toast-close-icon {
-  color: $lightSiteColor !important;
+  color: var(--lightSiteColor) !important;
 }
 .transitionStyle {
-  -webkit-transition: all ease-in-out 0.25s;
-  -moz-transition: all ease-in-out 0.25s;
-  -ms-transition: all ease-in-out 0.25s;
-  -o-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
 }
 .loginBox {
@@ -45,10 +34,9 @@ $whiteSiteColor: #ffffff;
   justify-content: center;
 }
 .login-container {
-  background-color: rgba(255, 188, 73, 0.8);
-  border: 3px solid $darkSiteColor;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
+  background-color: var(--veryLightSiteColor);
+  border: 2px solid var(--lightSiteColor);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
   border-radius: 5px;
   padding: 50px 20px;
   display: flex;
@@ -57,20 +45,23 @@ $whiteSiteColor: #ffffff;
   justify-content: center;
 }
 .login-title {
-  font-family: 'Montserrat Alternates', sans-serif;
+  color: var(--darkSiteColor);
   font-size: 24px;
   text-align: center;
   margin-bottom: 40px;
 }
+.login-img {
+  filter: var(--logo-img);
+}
 .login-subtitle {
-  font-family: 'Montserrat Alternates', sans-serif;
+  color: var(--darkSiteColor);
   font-size: 20px;
   text-align: center;
   margin-top: 40px;
   margin-bottom: 30px;
   height: 3px;
   width: 100%;
-  background-color: $darkSiteColor;
+  background-color: var(--darkSiteColor);
 }
 .form-container {
   form {
@@ -80,7 +71,7 @@ $whiteSiteColor: #ffffff;
       flex-flow: row-reverse nowrap;
       label {
         font-family: 'Montserrat Alternates', sans-serif;
-        color: $middleSiteColor;
+        color: var(--middleSiteColor);
         margin-left: 50px;
       }
       fa-icon {
@@ -89,12 +80,8 @@ $whiteSiteColor: #ffffff;
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid $darkSiteColor;
-        border-right: none;
-        background-color: $darkSiteColor;
-        color: $lightSiteColor;
-        -webkit-border-radius: 3px 0 0 3px;
-        -moz-border-radius: 3px 0 0 3px;
+        background-color: var(--darkSiteColor);
+        color: var(--lightSiteColor);
         border-radius: 3px 0 0 3px;
         font-size: 18px;
       }
@@ -102,35 +89,31 @@ $whiteSiteColor: #ffffff;
         width: calc(100% - 45px);
         height: 45px;
         background-color: transparent;
-        border-color: $darkSiteColor;
+        border-color: var(--darkSiteColor);
         font-family: 'Montserrat Alternates', sans-serif;
-        color: $darkSiteColor;
+        color: var(--darkSiteColor);
         font-size: 16px;
-        -webkit-border-radius: 0 3px 3px 0;
-        -moz-border-radius: 0 3px 3px 0;
         border-radius: 0 3px 3px 0;
       }
       input:focus ~ fa-icon {
         background-color: transparent;
-        color: $darkSiteColor;
+        color: var(--darkSiteColor);
       }
     }
     button {
       margin-top: 20px;
       width: 100%;
       height: 45px;
-      background-color: $darkSiteColor;
-      border-color: $darkSiteColor;
+      background-color: var(--darkSiteColor);
+      border-color: var(--darkSiteColor);
       font-family: 'Montserrat Alternates', sans-serif;
-      color: $lightSiteColor;
+      color: var(--lightSiteColor);
       font-size: 16px;
     }
     button:disabled {
       cursor: not-allowed;
     }
     button:focus {
-      -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 1);
-      -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 1);
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 1);
     }
   }
@@ -141,8 +124,6 @@ $whiteSiteColor: #ffffff;
   }
   .login-container {
     width: 100%;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
     border-radius: 0;
     border-left: none;
     border-right: none;

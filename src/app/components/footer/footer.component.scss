@@ -1,28 +1,13 @@
-$darkSiteColor: #403121;
-$lightSiteColor: #ed9728;
-$veryLightSiteColor: #ffbc49;
-$ultraLightSiteColor: #ffffbf;
-$middleSiteColor: #a65e09;
-$blackSiteColor: #000000;
-$whiteSiteColor: #ffffff;
-
 .transitionStyle {
-  -webkit-transition: all ease-in-out 0.25s;
-  -moz-transition: all ease-in-out 0.25s;
-  -ms-transition: all ease-in-out 0.25s;
-  -o-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
 }
 .footer {
   width: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   .footer-nav {
     padding: 10px;
-    background-color: $lightSiteColor;
-    border-bottom: 3px solid $middleSiteColor;
+    background-color: var(--lightSiteColor);
+    border-bottom: 2px solid var(--middleSiteColor);
     box-sizing: border-box;
     display: flex;
     flex-flow: row wrap;
@@ -34,28 +19,21 @@ $whiteSiteColor: #ffffff;
       font-weight: bold;
       letter-spacing: 0.5px;
       text-decoration: none;
-      color: $darkSiteColor;
+      color: var(--darkSiteColor);
       display: inline-block;
       margin-left: 5px;
       margin-right: 5px;
-      -webkit-transition: all ease-in-out 0.25s;
-      -moz-transition: all ease-in-out 0.25s;
-      -ms-transition: all ease-in-out 0.25s;
-      -o-transition: all ease-in-out 0.25s;
       transition: all ease-in-out 0.25s;
       position: relative;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
       user-select: none;
     }
     a.nav-link:active,
     a.nav-link:hover {
-      color: $blackSiteColor;
+      color: var(--blackSiteColor);
     }
   }
   .footer-info {
-    background-color: $veryLightSiteColor;
+    background-color: var(--veryLightSiteColor);
     font-family: 'Montserrat Alternates', sans-serif;
     display: flex;
     flex-flow: row wrap;
@@ -64,6 +42,7 @@ $whiteSiteColor: #ffffff;
     padding: 20px;
     .footer-logo {
       margin-right: 25px;
+      filter: var(--logo-img);
     }
     .footer-title {
       display: flex;
@@ -71,16 +50,17 @@ $whiteSiteColor: #ffffff;
       justify-content: center;
       text-align: center;
       font-size: 32px;
-      color: $darkSiteColor;
+      color: var(--darkSiteColor);
     }
   }
   .footer-address {
-    background-color: $veryLightSiteColor;
+    background-color: var(--veryLightSiteColor);
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 18px;
+    font-weight: 500;
     padding: 10px;
-    color: $darkSiteColor;
-    border-top: 3px solid $middleSiteColor;
+    color: var(--darkSiteColor);
+    border-top: 2px solid var(--middleSiteColor);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,7 +71,7 @@ $whiteSiteColor: #ffffff;
     }
   }
   .footer-other {
-    background-color: $lightSiteColor;
+    background-color: var(--lightSiteColor);
     font-family: 'Montserrat Alternates', sans-serif;
     padding: 10px;
     font-size: 16px;
@@ -105,7 +85,7 @@ $whiteSiteColor: #ffffff;
       justify-content: center;
       text-align: center;
       text-decoration: none;
-      color: $darkSiteColor;
+      color: var(--darkSiteColor);
       margin: 0 10px;
     }
     a {
@@ -114,7 +94,7 @@ $whiteSiteColor: #ffffff;
       justify-content: center;
       text-align: center;
       text-decoration: none;
-      color: $darkSiteColor;
+      color: var(--darkSiteColor);
       margin: 0 10px;
       fa-icon.gitHub {
         font-size: 20px;
@@ -126,7 +106,7 @@ $whiteSiteColor: #ffffff;
       }
     }
     a:hover {
-      color: $blackSiteColor;
+      color: var(--blackSiteColor);
     }
   }
 }
