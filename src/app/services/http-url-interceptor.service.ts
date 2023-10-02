@@ -9,14 +9,14 @@ import {
   providedIn: 'root',
 })
 export class HttpUrlInterceptorService implements HttpInterceptor {
-  // baseUrl = 'https://komfortdim-php.infinityfreeapp.com';
-  baseUrl = 'https://komfortdimphp.herokuapp.com';
+  baseUrl = 'https://komfortdim-php.infinityfreeapp.com';
+  // baseUrl = 'https://komfortdimphp.herokuapp.com';
   // baseUrl = 'https://komfortdim-server.onrender.com';
 
   constructor() {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
-    if (req.url !== 'https://komfortdim.herokuapp.com/authenticate') {
+    if (req.url !== 'https://komfortdim-server.onrender.com/authenticate') {
       const reqWithUrl = req.clone({
         url: this.baseUrl + req.url,
       });

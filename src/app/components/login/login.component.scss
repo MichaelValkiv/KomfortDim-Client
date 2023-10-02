@@ -50,6 +50,9 @@
   text-align: center;
   margin-bottom: 40px;
 }
+.login-img {
+  filter: var(--logo-img);
+}
 .login-subtitle {
   color: var(--darkSiteColor);
   font-size: 20px;

@@ -10,7 +10,7 @@ export class AuthenticationService {
 
   authenticate(username, password) {
     return this.http
-      .post<any>('https://komfortdim.herokuapp.com/authenticate', {
+      .post<any>('https://komfortdim-server.onrender.com/authenticate', {
         username,
         password,
       })
