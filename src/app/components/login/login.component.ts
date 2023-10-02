@@ -45,9 +45,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       .subscribe(
         (data) => {
           console.log(data);
-          this.router.navigate(['']).then(() => {
-            // window.location.reload();
-          });
+          this.router.navigate(['']).then(() => {});
           this.invalidLogin = false;
         },
         (error) => {

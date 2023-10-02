@@ -36,6 +36,10 @@
   .ui-tabview.ui-tabview-top .ui-tabview-nav li > a {
     color: var(--darkSiteColor);
   }
+  .ui-tabview.ui-tabview-top .ui-tabview-nav li:hover > a {
+    color: var(--middleSiteColor) !important;
+  }
+
   .ui-tabview-selected > a {
     background-color: var(--darkSiteColor) !important;
     color: var(--veryLightSiteColor) !important;
@@ -325,10 +329,12 @@
       input:focus ~ fa-icon {
         background-color: transparent;
         color: var(--darkSiteColor);
+        border: none;
       }
       textarea:focus ~ fa-icon {
         background-color: transparent;
         color: var(--darkSiteColor);
+        border: none;
       }
     }
     .form-alert {
