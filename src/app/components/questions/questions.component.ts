@@ -169,7 +169,7 @@ export class QuestionsComponent implements OnInit, OnDestroy {
       this.newOrEditedQuestion.question_author =
         this.userFirstName + ' ' + this.userLastName;
       this.newOrEditedQuestion.question_date = null;
-      this.newOrEditedQuestion.answer = 'Поки що відповіді немає.';
+      this.newOrEditedQuestion.answer = '<p>Поки що відповіді немає.</p>';
       this.postQuestionSubscription = this.questionsService
         .postQuestionInfo(this.newOrEditedQuestion)
         .subscribe(
