@@ -4,9 +4,10 @@
 .footer {
   width: 100%;
   user-select: none;
+  color: var(--darkSiteColor);
   .footer-nav {
     padding: 10px;
-    background-color: var(--lightSiteColor);
+    background-color: var(--veryLightSiteColor);
     border-bottom: 2px solid var(--middleSiteColor);
     box-sizing: border-box;
     display: flex;
@@ -19,13 +20,13 @@
       font-weight: bold;
       letter-spacing: 0.5px;
       text-decoration: none;
-      color: var(--darkSiteColor);
       display: inline-block;
       margin-left: 5px;
       margin-right: 5px;
       transition: all ease-in-out 0.25s;
       position: relative;
       user-select: none;
+      color: var(--darkSiteColor);
     }
     a.nav-link:active,
     a.nav-link:hover {
@@ -59,7 +60,6 @@
     font-size: 18px;
     font-weight: 500;
     padding: 10px;
-    color: var(--darkSiteColor);
     border-top: 2px solid var(--middleSiteColor);
     display: flex;
     align-items: center;
@@ -70,43 +70,35 @@
       font-size: 32px;
     }
   }
-  .footer-other {
-    background-color: var(--lightSiteColor);
-    font-family: 'Montserrat Alternates', sans-serif;
-    padding: 10px;
-    font-size: 16px;
+  .footer-dev {
+    background-color: var(--veryLightSiteColor);
+    border-top: 2px solid var(--middleSiteColor);
+    font-weight: 500;
     display: flex;
-    flex-flow: row wrap;
-    align-content: center;
     justify-content: center;
-    div.order-site {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      text-decoration: none;
-      color: var(--darkSiteColor);
-      margin: 0 10px;
-    }
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      text-decoration: none;
-      color: var(--darkSiteColor);
-      margin: 0 10px;
-      fa-icon.gitHub {
-        font-size: 20px;
-        margin-right: 5px;
+    align-items: center;
+    padding: 16px 8px;
+
+    .dev-link {
+      margin: 0 14px;
+      &:hover {
+        .dev-logo {
+          background-image: var(--dev-img-hover);
+        }
       }
-      fa-icon.external-link {
-        font-size: 16px;
-        margin-left: 10px;
+      .dev-logo {
+        background-image: var(--dev-img);
+        background-size: contain;
+        background-position: center;
+        width: 152px;
+        height: 38px;
       }
     }
-    a:hover {
-      color: var(--blackSiteColor);
+
+    fa-icon {
+      font-size: 18px;
+      position: relative;
+      top: -2px;
     }
   }
 }

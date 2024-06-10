@@ -215,9 +215,9 @@
         border: 2px solid var(--lightSiteColor);
         border-right-width: 0;
         display: flex;
-        align-items: center;
         justify-content: center;
         border-radius: 5px 0 0 5px;
+        padding-top: 25px;
       }
       .question-text {
         width: calc(100% - 100px);
@@ -297,9 +297,9 @@
         border: 2px solid var(--lightSiteColor);
         border-left-width: 0;
         display: flex;
-        align-items: center;
         justify-content: center;
         border-radius: 0 5px 5px 0;
+        padding-top: 25px;
       }
       .answer-text {
         width: calc(100% - 100px);

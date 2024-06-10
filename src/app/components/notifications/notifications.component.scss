@@ -207,8 +207,8 @@
     background-color: var(--veryLightSiteColor);
     color: var(--darkSiteColor);
     display: flex;
-    align-items: center;
     justify-content: center;
+    padding-top: 25px;
   }
   .notifications-text {
     width: calc(100% - 100px);

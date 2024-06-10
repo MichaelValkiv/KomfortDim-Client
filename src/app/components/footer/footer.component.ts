@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faMapMarkerAlt,
+  faExternalLinkAlt,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-footer',
@@ -8,4 +11,5 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 })
 export class FooterComponent {
   faMapMarkerAlt = faMapMarkerAlt;
+  faExternalLinkAlt = faExternalLinkAlt;
 }

@@ -19,6 +19,8 @@
   );
   --bg-img: url('/assets/backgrounds/city-main-background.png');
   --bg-img1: url('/assets/backgrounds/city-main-background1.png');
+  --dev-img: url('/assets/images/forge_light.png');
+  --dev-img-hover: url('/assets/images/forge_original.png');
   --logo-img: hue-rotate(0deg);
 }
 
@@ -43,5 +45,7 @@
   );
   --bg-img: url('/assets/backgrounds/city-main-background-dark.png');
   --bg-img1: url('/assets/backgrounds/city-main-background1-dark.png');
+  --dev-img: url('/assets/images/forge_dark.png');
+  --dev-img-hover: url('/assets/images/forge_original.png');
   --logo-img: hue-rotate(155deg);
 }
